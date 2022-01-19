@@ -1,0 +1,4 @@
+[ZoneTransfer]
+ZoneId=3
+ReferrerUrl=https://hadoop.apache.org/
+HostUrl=https://archive.apache.org/dist/hadoop/common/hadoop-3.3.1/hadoop-3.3.1-src.tar.gz
