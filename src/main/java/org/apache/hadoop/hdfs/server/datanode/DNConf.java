@@ -84,7 +84,7 @@ public class DNConf {
   final int socketTimeout;
   final int socketWriteTimeout;
   final int socketKeepaliveTimeout;
-  private final int transferSocketSendBufferSize;
+  public int transferSocketSendBufferSize;
   private final int transferSocketRecvBufferSize;
   private final boolean tcpNoDelay;
 
@@ -94,13 +94,13 @@ public class DNConf {
   final boolean syncBehindWritesInBackground;
   final boolean dropCacheBehindReads;
   final boolean syncOnClose;
-  final boolean encryptDataTransfer;
-  final boolean connectToDnViaHostname;
+  public boolean encryptDataTransfer;
+  boolean connectToDnViaHostname;
   final boolean overwriteDownstreamDerivedQOP;
   private final boolean pmemCacheRecoveryEnabled;
 
   final long readaheadLength;
-  final long heartBeatInterval;
+  public long heartBeatInterval;
   private final long lifelineIntervalMs;
   final long blockReportInterval;
   final long blockReportSplitThreshold;
@@ -113,7 +113,7 @@ public class DNConf {
   final long datanodeSlowIoWarningThresholdMs;
 
   final String minimumNameNodeVersion;
-  final String encryptionAlgorithm;
+  String encryptionAlgorithm;
   final SaslPropertiesResolver saslPropsResolver;
   final TrustedChannelResolver trustedChannelResolver;
   private final boolean ignoreSecurePortsForTesting;
@@ -126,7 +126,7 @@ public class DNConf {
   final long maxLockedMemory;
   private final String[] pmemDirs;
 
-  private final long bpReadyTimeout;
+  public  long bpReadyTimeout;
 
   // Allow LAZY_PERSIST writes from non-local clients?
   private final boolean allowNonLocalLazyPersist;

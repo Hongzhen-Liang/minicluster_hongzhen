@@ -60,13 +60,8 @@ import static org.apache.hadoop.hdfs.DFSConfigKeys.DFS_NAMESERVICE_ID;
 import static org.apache.hadoop.hdfs.DFSConfigKeys.DFS_REPLICATION_KEY;
 import static org.apache.hadoop.hdfs.server.common.Util.fileAsURI;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.net.InetSocketAddress;
-import java.net.URI;
-import java.net.URISyntaxException;
+import java.io.*;
+import java.net.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
@@ -551,6 +546,7 @@ public class MiniDFSCluster implements AutoCloseable {
       }
     }
 
+
     initMiniDFSCluster(builder.conf,
                        builder.numDataNodes,
                        builder.storageTypes,
@@ -847,6 +843,58 @@ public class MiniDFSCluster implements AutoCloseable {
                        true, false, false, null, true, false);
   }
 
+  //Author:Hongzhen Liang
+  private Thread outerDataNodeServer = null;
+  class outerDataNodeServer implements Runnable {
+    private Thread t;
+    private String threadName;
+
+    outerDataNodeServer(String name) {
+      threadName = name;
+      System.out.println("Creating " + threadName);
+    }
+
+    public void run() {
+      try {
+        ServerSocket server = new ServerSocket(9525);
+        while (true) {
+          Socket socket = server.accept();
+          BufferedReader is = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+          String line = is.readLine();
+          String property = line.split(",")[0];
+          String newVal= line.split(",")[1];
+          PrintWriter pw = new PrintWriter(socket.getOutputStream());
+          pw.printf("property is %s, newVal is %s\n",property,newVal);
+          pw.flush();
+
+          ArrayList<DataNode> dns = getDataNodes();
+          for (DataNode dn:dns) {
+            dn.reconfigurePropertyImpl(property,newVal);
+          }
+
+          pw.close();
+          is.close();
+          socket.close();
+        }
+      } catch (Exception e) {
+        e.printStackTrace();
+        //server.close();
+      }
+    }
+
+    public void start() {
+      System.out.println("Starting " + threadName);
+      if (t == null) {
+        t = new Thread(this, threadName);
+        t.start();
+      }
+    }
+  }
+  private void initOuterDataNodeServer() throws IOException{
+    this.outerDataNodeServer = new Thread(new outerDataNodeServer("outerDataNodeServer"));
+    this.outerDataNodeServer.setDaemon(true);
+  }
+
   private void initMiniDFSCluster(
       Configuration conf,
       int numDataNodes, StorageType[][] storageTypes, boolean format,
@@ -953,6 +1001,8 @@ public class MiniDFSCluster implements AutoCloseable {
       ProxyUsers.refreshSuperUserGroupsConfiguration(conf);
       success = true;
     } finally {
+      initOuterDataNodeServer();
+      outerDataNodeServer.start();
       if (!success) {
         shutdown();
       }

@@ -18,34 +18,7 @@
 package org.apache.hadoop.hdfs.server.datanode;
 
 
-import static org.apache.hadoop.hdfs.DFSConfigKeys.DFS_DATANODE_ADDRESS_DEFAULT;
-import static org.apache.hadoop.hdfs.DFSConfigKeys.DFS_DATANODE_ADDRESS_KEY;
-import static org.apache.hadoop.hdfs.DFSConfigKeys.DFS_DATANODE_DATA_DIR_KEY;
-import static org.apache.hadoop.hdfs.DFSConfigKeys.DFS_DATANODE_DIRECTORYSCAN_INTERVAL_DEFAULT;
-import static org.apache.hadoop.hdfs.DFSConfigKeys.DFS_DATANODE_DIRECTORYSCAN_INTERVAL_KEY;
-import static org.apache.hadoop.hdfs.DFSConfigKeys.DFS_DATANODE_DNS_INTERFACE_KEY;
-import static org.apache.hadoop.hdfs.DFSConfigKeys.DFS_DATANODE_DNS_NAMESERVER_KEY;
-import static org.apache.hadoop.hdfs.DFSConfigKeys.DFS_DATANODE_HANDLER_COUNT_DEFAULT;
-import static org.apache.hadoop.hdfs.DFSConfigKeys.DFS_DATANODE_HANDLER_COUNT_KEY;
-import static org.apache.hadoop.hdfs.DFSConfigKeys.DFS_DATANODE_HOST_NAME_KEY;
-import static org.apache.hadoop.hdfs.DFSConfigKeys.DFS_DATANODE_HTTP_ADDRESS_DEFAULT;
-import static org.apache.hadoop.hdfs.DFSConfigKeys.DFS_DATANODE_HTTP_ADDRESS_KEY;
-import static org.apache.hadoop.hdfs.DFSConfigKeys.DFS_DATANODE_IPC_ADDRESS_KEY;
-import static org.apache.hadoop.hdfs.DFSConfigKeys.DFS_DATANODE_KERBEROS_PRINCIPAL_KEY;
-import static org.apache.hadoop.hdfs.DFSConfigKeys.DFS_DATANODE_KEYTAB_FILE_KEY;
-import static org.apache.hadoop.hdfs.DFSConfigKeys.DFS_DATANODE_MAX_LOCKED_MEMORY_KEY;
-import static org.apache.hadoop.hdfs.DFSConfigKeys.DFS_DATANODE_NETWORK_COUNTS_CACHE_MAX_SIZE_DEFAULT;
-import static org.apache.hadoop.hdfs.DFSConfigKeys.DFS_DATANODE_NETWORK_COUNTS_CACHE_MAX_SIZE_KEY;
-import static org.apache.hadoop.hdfs.DFSConfigKeys.DFS_DATANODE_OOB_TIMEOUT_DEFAULT;
-import static org.apache.hadoop.hdfs.DFSConfigKeys.DFS_DATANODE_OOB_TIMEOUT_KEY;
-import static org.apache.hadoop.hdfs.DFSConfigKeys.DFS_DATANODE_PLUGINS_KEY;
-import static org.apache.hadoop.hdfs.DFSConfigKeys.DFS_DATANODE_STARTUP_KEY;
-import static org.apache.hadoop.hdfs.DFSConfigKeys.DFS_DATANODE_BALANCE_MAX_NUM_CONCURRENT_MOVES_KEY;
-import static org.apache.hadoop.hdfs.DFSConfigKeys.DFS_DATANODE_BALANCE_MAX_NUM_CONCURRENT_MOVES_DEFAULT;
-import static org.apache.hadoop.hdfs.DFSConfigKeys.DFS_MAX_NUM_BLOCKS_TO_LOG_DEFAULT;
-import static org.apache.hadoop.hdfs.DFSConfigKeys.DFS_MAX_NUM_BLOCKS_TO_LOG_KEY;
-import static org.apache.hadoop.hdfs.DFSConfigKeys.DFS_DATANODE_METRICS_LOGGER_PERIOD_SECONDS_DEFAULT;
-import static org.apache.hadoop.hdfs.DFSConfigKeys.DFS_DATANODE_METRICS_LOGGER_PERIOD_SECONDS_KEY;
+import static org.apache.hadoop.hdfs.DFSConfigKeys.*;
 import static org.apache.hadoop.hdfs.protocol.datatransfer.BlockConstructionStage.PIPELINE_SETUP_APPEND_RECOVERY;
 import static org.apache.hadoop.hdfs.protocol.datatransfer.BlockConstructionStage.PIPELINE_SETUP_CREATE;
 import static org.apache.hadoop.hdfs.protocol.datatransfer.BlockConstructionStage.PIPELINE_SETUP_STREAMING_RECOVERY;
@@ -303,12 +276,19 @@ public class DataNode extends ReconfigurableBase
   public static final String MAX_VOLUME_FAILURES_TOLERATED_MSG =
       "should be greater than or equal to -1";
 
+  //Author: Hongzhen Liang
   /** A list of property that are reconfigurable at runtime. */
   private static final List<String> RECONFIGURABLE_PROPERTIES =
       Collections.unmodifiableList(
           Arrays.asList(
               DFS_DATANODE_DATA_DIR_KEY,
-              DFS_DATANODE_BALANCE_MAX_NUM_CONCURRENT_MOVES_KEY));
+              DFS_DATANODE_BALANCE_MAX_NUM_CONCURRENT_MOVES_KEY,
+              DFS_HEARTBEAT_INTERVAL_KEY,
+              DFS_ENCRYPT_DATA_TRANSFER_KEY,
+              DFS_DATA_ENCRYPTION_ALGORITHM_KEY,
+              DFS_DATANODE_BP_READY_TIMEOUT_KEY,
+              DFS_DATANODE_USE_DN_HOSTNAME,
+              DFS_DATANODE_TRANSFER_SOCKET_SEND_BUFFER_SIZE_KEY));
 
   public static final Log METRICS_LOG = LogFactory.getLog("DataNodeMetricsLog");
 
@@ -336,7 +316,7 @@ public class DataNode extends ReconfigurableBase
   Daemon localDataXceiverServer = null;
   ShortCircuitRegistry shortCircuitRegistry = null;
   ThreadGroup threadGroup = null;
-  public DNConf dnConf;
+  private DNConf dnConf;
   private volatile boolean heartbeatsDisabledForTests = false;
   private volatile boolean ibrDisabledForTests = false;
   private volatile boolean cacheReportsDisabledForTests = false;
@@ -615,6 +595,86 @@ public class DataNode extends ReconfigurableBase
           }
         }
         break;
+      }
+      //Author: Hongzhen Liang
+      case DFS_HEARTBEAT_INTERVAL_KEY:{
+        LOG.info("Reconfiguring {} to {}", property, newVal);
+        long heartBeatInterval;
+        if(newVal==null){
+          heartBeatInterval = DFS_HEARTBEAT_INTERVAL_DEFAULT;
+        }else{
+          heartBeatInterval = Long.valueOf(newVal);
+        }
+        this.getDnConf().heartBeatInterval=heartBeatInterval;
+        getConf().setLong(DFS_HEARTBEAT_INTERVAL_KEY,heartBeatInterval);
+        //blockPoolManager.setHeartbeat(interval);
+        return Long.toString(heartBeatInterval);
+      }
+      case DFS_ENCRYPT_DATA_TRANSFER_KEY: {
+        LOG.info("Reconfiguring {} to {}", property, newVal);
+        boolean encrypt;
+        if (newVal == null) {
+          // set to default
+          encrypt = DFS_ENCRYPT_DATA_TRANSFER_DEFAULT;
+        } else {
+          encrypt = Boolean.parseBoolean(newVal);
+        }
+        this.dnConf.encryptDataTransfer=encrypt;
+        getConf().unset(DFS_ENCRYPT_DATA_TRANSFER_KEY);
+        getConf().set(DFS_ENCRYPT_DATA_TRANSFER_KEY,Boolean.toString(encrypt));
+        return Boolean.toString(encrypt);
+      }
+      case DFS_DATA_ENCRYPTION_ALGORITHM_KEY: {
+        LOG.info("Reconfiguring {} to {}", property, newVal);
+        String encryptionAlgorithm;
+        if(newVal == null){
+          encryptionAlgorithm = getConf().get(DFS_DATA_ENCRYPTION_ALGORITHM_KEY);
+        }else{
+          encryptionAlgorithm = newVal;
+        }
+        this.getDnConf().encryptionAlgorithm=newVal;
+        getConf().unset(DFS_DATA_ENCRYPTION_ALGORITHM_KEY);
+        getConf().set(DFS_DATA_ENCRYPTION_ALGORITHM_KEY,encryptionAlgorithm);
+        return newVal;
+      }
+      case DFS_DATANODE_BP_READY_TIMEOUT_KEY:{
+        LOG.info("Reconfiguring {} to {}", property, newVal);
+        long bpReadyTimeout;
+        if(newVal==null){
+          bpReadyTimeout = DFS_DATANODE_BP_READY_TIMEOUT_DEFAULT;
+        }else{
+          bpReadyTimeout = Long.valueOf(newVal);
+        }
+        this.getDnConf().bpReadyTimeout = bpReadyTimeout;
+        getConf().unset(DFS_DATANODE_BP_READY_TIMEOUT_KEY);
+        getConf().setTimeDuration(DFS_DATANODE_BP_READY_TIMEOUT_KEY,bpReadyTimeout,TimeUnit.SECONDS);
+        return Long.toString(bpReadyTimeout);
+      }
+      case DFS_DATANODE_USE_DN_HOSTNAME:{
+        LOG.info("Reconfiguring {} to {}", property, newVal);
+        boolean connectToDnViaHostname;
+        if(newVal == null){
+          connectToDnViaHostname = DFS_DATANODE_USE_DN_HOSTNAME_DEFAULT;
+        }else{
+          connectToDnViaHostname = Boolean.parseBoolean(newVal);
+        }
+        this.getDnConf().connectToDnViaHostname = connectToDnViaHostname;
+        getConf().unset(DFS_DATANODE_USE_DN_HOSTNAME);
+        getConf().set(DFS_DATANODE_USE_DN_HOSTNAME,Boolean.toString(connectToDnViaHostname));
+        return Boolean.toString(connectToDnViaHostname);
+      }
+      case DFS_DATANODE_TRANSFER_SOCKET_SEND_BUFFER_SIZE_KEY:{
+        LOG.info("Reconfiguring {} to {}", property, newVal);
+        int transferSocketSendBufferSize;
+        if(newVal == null){
+          transferSocketSendBufferSize = DFS_DATANODE_TRANSFER_SOCKET_SEND_BUFFER_SIZE_DEFAULT;
+        }else{
+          transferSocketSendBufferSize = Integer.parseInt(newVal);
+        }
+        getConf().unset(DFS_DATANODE_TRANSFER_SOCKET_SEND_BUFFER_SIZE_KEY);
+        getConf().set(DFS_DATANODE_TRANSFER_SOCKET_SEND_BUFFER_SIZE_KEY,Integer.toString(transferSocketSendBufferSize));
+        this.getDnConf().transferSocketSendBufferSize = transferSocketSendBufferSize;
+        return Integer.toString(transferSocketSendBufferSize);
       }
       default:
         break;
