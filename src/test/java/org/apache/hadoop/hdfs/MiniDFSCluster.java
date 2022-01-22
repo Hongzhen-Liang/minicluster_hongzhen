@@ -62,16 +62,15 @@ import static org.apache.hadoop.hdfs.server.common.Util.fileAsURI;
 
 import java.io.*;
 import java.net.*;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 
 import java.util.function.Supplier;
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.apache.hadoop.conf.ReconfigurationException;
 import org.apache.hadoop.thirdparty.com.google.common.collect.ArrayListMultimap;
 import org.apache.hadoop.thirdparty.com.google.common.collect.Multimap;
 import org.apache.hadoop.hdfs.server.common.blockaliasmap.BlockAliasMap;
@@ -867,10 +866,7 @@ public class MiniDFSCluster implements AutoCloseable {
           pw.printf("property is %s, newVal is %s\n",property,newVal);
           pw.flush();
 
-          ArrayList<DataNode> dns = getDataNodes();
-          for (DataNode dn:dns) {
-            dn.reconfigurePropertyImpl(property,newVal);
-          }
+          changeProperty(line);
 
           pw.close();
           is.close();
@@ -878,7 +874,6 @@ public class MiniDFSCluster implements AutoCloseable {
         }
       } catch (Exception e) {
         e.printStackTrace();
-        //server.close();
       }
     }
 
@@ -890,9 +885,65 @@ public class MiniDFSCluster implements AutoCloseable {
       }
     }
   }
-  private void initOuterDataNodeServer() throws IOException{
+  private Thread BroadCastClientServer = null;
+  class BroadCastClientServer implements Runnable {
+    private Thread t;
+    private String threadName;
+
+    BroadCastClientServer(String name) {
+      threadName = name;
+      System.out.println("Creating " + threadName);
+    }
+
+    public void run() {
+      try{
+        String line = "MiniDFSCluster started";
+        Socket socket = new Socket("127.0.0.1",9524);
+        PrintWriter pw = new PrintWriter(socket.getOutputStream());
+        BufferedReader is = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+        pw.println(line);
+        pw.flush();
+        line = is.readLine();
+
+        changeProperty(line);
+
+        pw.close();
+        is.close();
+        socket.close();
+      } catch(Exception e){
+        e.printStackTrace();
+      }
+
+    }
+
+    public void start() {
+      System.out.println("Starting " + threadName);
+      if (t == null) {
+        t = new Thread(this, threadName);
+        t.start();
+      }
+    }
+  }
+
+  public void changeProperty(String line) throws ReconfigurationException, InterruptedException {
+    String property = line.split(",")[0];
+    String newVal= line.split(",")[1];
+
+    long sleepTime = 300;
+    Random r = new Random();
+    sleepTime+=r.nextInt(1500);
+    TimeUnit.MILLISECONDS.sleep(sleepTime);
+    ArrayList<DataNode> dns = getDataNodes();
+    for (DataNode dn:dns) {
+      dn.reconfigurePropertyImpl(property,newVal);
+    }
+  }
+
+  private void initCustomServer() throws IOException{
     this.outerDataNodeServer = new Thread(new outerDataNodeServer("outerDataNodeServer"));
     this.outerDataNodeServer.setDaemon(true);
+    this.BroadCastClientServer = new Thread(new BroadCastClientServer("BroadCastClientServer"));
+    this.BroadCastClientServer.setDaemon(true);
   }
 
   private void initMiniDFSCluster(
@@ -1001,14 +1052,18 @@ public class MiniDFSCluster implements AutoCloseable {
       ProxyUsers.refreshSuperUserGroupsConfiguration(conf);
       success = true;
     } finally {
-      initOuterDataNodeServer();
-      outerDataNodeServer.start();
+      initCustomServer();
+      //outerDataNodeServer.start();
+      BroadCastClientServer.start();
+
+
       if (!success) {
         shutdown();
       }
     }
   }
-  
+
+
   /**
    * @return a debug string which can help diagnose an error of why
    * a given directory might have a permissions error in the context

@@ -26,7 +26,7 @@ public class TestCluster_Hongzhen{
         FileSystem fs = cluster.getFileSystem();
         mylog.error("start sleep");
         while(true){
-            mylog.error("EncryptDataTransfer="+dn.getDnConf().getEncryptDataTransfer());
+            //mylog.error("EncryptDataTransfer="+dn.getDnConf().getEncryptDataTransfer());
             TimeUnit.SECONDS.sleep(10);
         }
 
