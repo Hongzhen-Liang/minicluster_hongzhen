@@ -14,9 +14,15 @@ def file_name_xml(file_dir):
                 xmls_name.append(file)
     return xmls_name
 
-def print_failure(scrach_file_dir,detail_file_dir,file_dir,xmls_name):
-    f_scrach = open(scrach_file_dir,"w")
-    f_detail = open(detail_file_dir,"w")
+def print_failure(Property,NewValue,DTest,file_dir,xmls_name):
+    if not os.path.exists("analyze/"+DTest):
+        os.makedirs("analyze/"+DTest)
+    f_scrach_dir="analyze/%s/scrach_error_%s_%s_%s.txt"%(DTest,Property,NewValue,DTest)
+    f_detail_dir="analyze/%s/detail_error_%s_%s_%s.txt"%(DTest,Property,NewValue,DTest)
+    f_scrach = open(f_scrach_dir,"w")
+    f_detail = open(f_detail_dir,"w")
+    
+    
     for xml_name in xmls_name:
         DOMTree = xml.dom.minidom.parse(file_dir+xml_name)
         collection = DOMTree.documentElement
@@ -33,10 +39,13 @@ def print_failure(scrach_file_dir,detail_file_dir,file_dir,xmls_name):
                 print("zero error")
     f_scrach.close()
     f_detail.close()
+    
 if __name__ == "__main__":
-    file_dir = "../target/surefire-reports/"
+    file_dir = "target/surefire-reports/"
     xmls_name = file_name_xml(file_dir)
-    print_failure("scrach_error.txt","detail_error.txt",file_dir,xmls_name)
+    print_failure(sys.argv[1],sys.argv[2],sys.argv[3],file_dir,xmls_name)
+    #print_failure(sys.argv[3],sys.argv[1]+"_"+sys.argv[2],sys.argv[1]+"_"+sys.argv[2],file_dir,xmls_name)
+    
 
 
 

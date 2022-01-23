@@ -937,6 +937,8 @@ public class MiniDFSCluster implements AutoCloseable {
     for (DataNode dn:dns) {
       dn.reconfigurePropertyImpl(property,newVal);
     }
+//    Log mylog = LogFactory.getLog("MyLog");
+//    mylog.error("reconfig "+property+","+newVal);
   }
 
   private void initCustomServer() throws IOException{
