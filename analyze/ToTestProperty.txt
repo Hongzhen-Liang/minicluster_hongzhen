@@ -1,0 +1,3 @@
+dfs.datanode.bp-ready.timeout,1,ALL
+dfs.datanode.use.datanode.hostname,true,ALL
+dfs.datanode.transfer.socket.send.buffer.size,ALL

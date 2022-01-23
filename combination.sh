@@ -11,19 +11,15 @@ newValue=$2
 DTest=$3
 
 javac BroadCastClient.java
-#nohup java BroadCastClient $property $newValue &
+nohup java BroadCastClient $property $newValue &
 
 if [ "$DTest" == "ALL" ]||[ -z "$DTest" ];then
 	mvn test
 else
-	#echo mvn -Dtest=$DTest test
 	mvn -Dtest=$DTest test
 fi
-#mvn test
-echo "yes"
 
+pid=$(jps | grep BroadCastClient | awk '{print $1}')
+kill -9 $pid
 
-pid=$(jps|grep BroadCastClient|awk  '{print $1}')
-#kill -9 $pid
-
-#python3 analyze/Error_Analyze.py $property $newValue $DTest
+python3 analyze/Error_Analyze.py $property $newValue $DTest
