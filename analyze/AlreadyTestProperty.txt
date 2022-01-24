@@ -1,1 +1,3 @@
-dfs.encrypt.data.transfer,true
+dfs.encrypt.data.transfer,true,ALL
+dfs.datanode.bp-ready.timeout,1,ALL
+dfs.datanode.use.datanode.hostname,true,ALL

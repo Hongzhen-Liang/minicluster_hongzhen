@@ -5,6 +5,12 @@ MAVEN_HOME="/opt/module/apache-maven-3.8.2"
 export PATH="$JAVA_HOME/bin:$MAVEN_HOME/bin:$PATH"
 
 
+if [[ ! -d "$target/surefire-reports" ]]; then
+ echo "文件夹不存在"
+else
+ rm -r target/surefire-reports
+fi
+
 # "./combination.sh dfs.encrypt.data.transfer true ALL"
 property=$1
 newValue=$2
