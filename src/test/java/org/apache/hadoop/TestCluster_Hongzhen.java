@@ -15,7 +15,7 @@ import java.lang.management.ManagementFactory;
 import java.util.concurrent.TimeUnit;
 
 public class TestCluster_Hongzhen{
-    @Test
+//    @Test
     public void testCluster() throws Exception {
         Log mylog = LogFactory.getLog("MyLog");
         Configuration conf = new HdfsConfiguration();

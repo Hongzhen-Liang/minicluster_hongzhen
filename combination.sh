@@ -6,7 +6,7 @@ export PATH="$JAVA_HOME/bin:$MAVEN_HOME/bin:$PATH"
 
 
 if [[ ! -d "$target/surefire-reports" ]]; then
- echo "文件夹不存在"
+ echo "File not exists"
 else
  rm -r target/surefire-reports
 fi
