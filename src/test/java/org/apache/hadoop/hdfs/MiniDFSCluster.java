@@ -856,7 +856,7 @@ public class MiniDFSCluster implements AutoCloseable {
     public void run() {
       try {
         ServerSocket server = new ServerSocket(9525);
-        while (true) {
+        while (!Thread.currentThread().isInterrupted()) {
           Socket socket = server.accept();
           BufferedReader is = new BufferedReader(new InputStreamReader(socket.getInputStream()));
           String line = is.readLine();
@@ -2191,6 +2191,8 @@ public class MiniDFSCluster implements AutoCloseable {
    * Shutdown all the nodes in the cluster.
    */
   public void shutdown(boolean deleteDfsDir, boolean closeFileSystem) {
+    //Author Hongzhen
+    outerDataNodeServer.interrupt();
     LOG.info("Shutting down the Mini HDFS Cluster");
     if (checkExitOnShutdown)  {
       if (ExitUtil.terminateCalled()) {

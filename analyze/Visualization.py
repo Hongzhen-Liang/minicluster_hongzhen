@@ -14,7 +14,7 @@ def Visualize(file_dir,file_names):
     Xs=[]
     Ys=[]
     for file in file_names:
-        Xs.append(file)
+        Xs.append((file.split(".")[-2]).split("_")[-3])
         Ys.append(len(open(file_dir+file,"rU").readlines()))
     plt.title("Online Configure Error analyze")
     plt.xlabel("Parameter") 
