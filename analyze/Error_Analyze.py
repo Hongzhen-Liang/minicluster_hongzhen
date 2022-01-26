@@ -26,14 +26,18 @@ def print_failure(Property,NewValue,DTest,file_dir,xmls_name):
     for xml_name in xmls_name:
         DOMTree = xml.dom.minidom.parse(file_dir+xml_name)
         collection = DOMTree.documentElement
+        if len(collection.getElementsByTagName("failure"))==0:
+            continue
+        f_scrach.write(collection.getAttribute("name")+"\n")
         Testcases = collection.getElementsByTagName("testcase")
         for Testcase in Testcases:
             Errors=Testcase.getElementsByTagName("failure")
             if len(Errors) != 0:
                 print(Testcase.getAttribute("name"))
-                f_scrach.write(Testcase.getAttribute("name")+"\n")
+                #f_scrach.write(Testcase.getAttribute("name")+"\n")
                 for Error in Errors:
                     # print(Error.toprettyxml(indent=' '))
+                    f_detail.write(Testcase.getAttribute("name")+"\n")
                     f_detail.write(Error.toprettyxml(indent=' ')+"\n")
             else:
                 print("zero error")
