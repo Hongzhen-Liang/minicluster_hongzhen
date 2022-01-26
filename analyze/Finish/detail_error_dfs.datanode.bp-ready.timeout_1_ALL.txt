@@ -18,7 +18,7 @@
 	at java.base/java.lang.Thread.run(Thread.java:832)
 ]]></failure>
 
-<failure message=" Expected to find 'localhost:33141: connect timed out' but got unexpected exception: java.net.SocketTimeoutException: localhost:33141: Connect timed out
+<failure message=" Expected to find 'localhost:43681: connect timed out' but got unexpected exception: java.net.SocketTimeoutException: localhost:43681: Connect timed out
  at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
  at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
  at java.base/java.net.Socket.connect(Socket.java:648)
@@ -56,7 +56,7 @@
  at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
  at java.base/java.lang.Thread.run(Thread.java:832)
 " type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
- Expected to find 'localhost:33141: connect timed out' but got unexpected exception: java.net.SocketTimeoutException: localhost:33141: Connect timed out
+ Expected to find 'localhost:43681: connect timed out' but got unexpected exception: java.net.SocketTimeoutException: localhost:43681: Connect timed out
 	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
 	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
 	at java.base/java.net.Socket.connect(Socket.java:648)
@@ -109,7 +109,7 @@
 	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.lang.Thread.run(Thread.java:832)
-Caused by: java.net.SocketTimeoutException: localhost:33141: Connect timed out
+Caused by: java.net.SocketTimeoutException: localhost:43681: Connect timed out
 	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
 	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
 	at java.base/java.net.Socket.connect(Socket.java:648)
@@ -137,7 +137,7 @@ Caused by: java.net.SocketTimeoutException: localhost:33141: Connect timed out
 	... 12 more
 ]]></failure>
 
-<failure message=" Expected to find 'localhost:42035: connect timed out' but got unexpected exception: java.net.SocketTimeoutException: localhost:42035: Connect timed out
+<failure message=" Expected to find 'localhost:46319: connect timed out' but got unexpected exception: java.net.SocketTimeoutException: localhost:46319: Connect timed out
  at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
  at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
  at java.base/java.net.Socket.connect(Socket.java:648)
@@ -182,7 +182,7 @@ Caused by: java.net.SocketTimeoutException: localhost:33141: Connect timed out
  at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
  at java.base/java.lang.Thread.run(Thread.java:832)
 " type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
- Expected to find 'localhost:42035: connect timed out' but got unexpected exception: java.net.SocketTimeoutException: localhost:42035: Connect timed out
+ Expected to find 'localhost:46319: connect timed out' but got unexpected exception: java.net.SocketTimeoutException: localhost:46319: Connect timed out
 	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
 	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
 	at java.base/java.net.Socket.connect(Socket.java:648)
@@ -242,7 +242,7 @@ Caused by: java.net.SocketTimeoutException: localhost:33141: Connect timed out
 	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.lang.Thread.run(Thread.java:832)
-Caused by: java.net.SocketTimeoutException: localhost:42035: Connect timed out
+Caused by: java.net.SocketTimeoutException: localhost:46319: Connect timed out
 	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
 	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
 	at java.base/java.net.Socket.connect(Socket.java:648)
@@ -277,7 +277,7 @@ Caused by: java.net.SocketTimeoutException: localhost:42035: Connect timed out
 	... 12 more
 ]]></failure>
 
-<failure message=" Expected to find 'localhost:42931: connect timed out' but got unexpected exception: java.net.SocketTimeoutException: localhost:42931: Connect timed out
+<failure message=" Expected to find 'localhost:43441: connect timed out' but got unexpected exception: java.net.SocketTimeoutException: localhost:43441: Connect timed out
  at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
  at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
  at java.base/java.net.Socket.connect(Socket.java:648)
@@ -315,7 +315,7 @@ Caused by: java.net.SocketTimeoutException: localhost:42035: Connect timed out
  at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
  at java.base/java.lang.Thread.run(Thread.java:832)
 " type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
- Expected to find 'localhost:42931: connect timed out' but got unexpected exception: java.net.SocketTimeoutException: localhost:42931: Connect timed out
+ Expected to find 'localhost:43441: connect timed out' but got unexpected exception: java.net.SocketTimeoutException: localhost:43441: Connect timed out
 	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
 	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
 	at java.base/java.net.Socket.connect(Socket.java:648)
@@ -368,7 +368,7 @@ Caused by: java.net.SocketTimeoutException: localhost:42035: Connect timed out
 	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.lang.Thread.run(Thread.java:832)
-Caused by: java.net.SocketTimeoutException: localhost:42931: Connect timed out
+Caused by: java.net.SocketTimeoutException: localhost:43441: Connect timed out
 	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
 	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
 	at java.base/java.net.Socket.connect(Socket.java:648)
@@ -396,7 +396,7 @@ Caused by: java.net.SocketTimeoutException: localhost:42931: Connect timed out
 	... 12 more
 ]]></failure>
 
-<failure message=" Expected to find 'localhost:33091: connect timed out' but got unexpected exception: java.net.SocketTimeoutException: localhost:33091: Connect timed out
+<failure message=" Expected to find 'localhost:38019: connect timed out' but got unexpected exception: java.net.SocketTimeoutException: localhost:38019: Connect timed out
  at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
  at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
  at java.base/java.net.Socket.connect(Socket.java:648)
@@ -438,7 +438,7 @@ Caused by: java.net.SocketTimeoutException: localhost:42931: Connect timed out
  at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
  at java.base/java.lang.Thread.run(Thread.java:832)
 " type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
- Expected to find 'localhost:33091: connect timed out' but got unexpected exception: java.net.SocketTimeoutException: localhost:33091: Connect timed out
+ Expected to find 'localhost:38019: connect timed out' but got unexpected exception: java.net.SocketTimeoutException: localhost:38019: Connect timed out
 	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
 	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
 	at java.base/java.net.Socket.connect(Socket.java:648)
@@ -495,7 +495,7 @@ Caused by: java.net.SocketTimeoutException: localhost:42931: Connect timed out
 	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.lang.Thread.run(Thread.java:832)
-Caused by: java.net.SocketTimeoutException: localhost:33091: Connect timed out
+Caused by: java.net.SocketTimeoutException: localhost:38019: Connect timed out
 	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
 	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
 	at java.base/java.net.Socket.connect(Socket.java:648)
@@ -527,7 +527,7 @@ Caused by: java.net.SocketTimeoutException: localhost:33091: Connect timed out
 	... 12 more
 ]]></failure>
 
-<failure message=" Expected to find 'localhost:33253: connect timed out' but got unexpected exception: java.net.SocketTimeoutException: localhost:33253: Connect timed out
+<failure message=" Expected to find 'localhost:44545: connect timed out' but got unexpected exception: java.net.SocketTimeoutException: localhost:44545: Connect timed out
  at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
  at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
  at java.base/java.net.Socket.connect(Socket.java:648)
@@ -565,7 +565,7 @@ Caused by: java.net.SocketTimeoutException: localhost:33091: Connect timed out
  at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
  at java.base/java.lang.Thread.run(Thread.java:832)
 " type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
- Expected to find 'localhost:33253: connect timed out' but got unexpected exception: java.net.SocketTimeoutException: localhost:33253: Connect timed out
+ Expected to find 'localhost:44545: connect timed out' but got unexpected exception: java.net.SocketTimeoutException: localhost:44545: Connect timed out
 	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
 	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
 	at java.base/java.net.Socket.connect(Socket.java:648)
@@ -618,7 +618,7 @@ Caused by: java.net.SocketTimeoutException: localhost:33091: Connect timed out
 	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.lang.Thread.run(Thread.java:832)
-Caused by: java.net.SocketTimeoutException: localhost:33253: Connect timed out
+Caused by: java.net.SocketTimeoutException: localhost:44545: Connect timed out
 	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
 	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
 	at java.base/java.net.Socket.connect(Socket.java:648)
@@ -646,7 +646,7 @@ Caused by: java.net.SocketTimeoutException: localhost:33253: Connect timed out
 	... 12 more
 ]]></failure>
 
-<failure message=" Expected to find 'localhost:36173: connect timed out' but got unexpected exception: java.net.SocketTimeoutException: localhost:36173: Connect timed out
+<failure message=" Expected to find 'localhost:32979: connect timed out' but got unexpected exception: java.net.SocketTimeoutException: localhost:32979: Connect timed out
  at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
  at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
  at java.base/java.net.Socket.connect(Socket.java:648)
@@ -691,7 +691,7 @@ Caused by: java.net.SocketTimeoutException: localhost:33253: Connect timed out
  at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
  at java.base/java.lang.Thread.run(Thread.java:832)
 " type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
- Expected to find 'localhost:36173: connect timed out' but got unexpected exception: java.net.SocketTimeoutException: localhost:36173: Connect timed out
+ Expected to find 'localhost:32979: connect timed out' but got unexpected exception: java.net.SocketTimeoutException: localhost:32979: Connect timed out
 	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
 	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
 	at java.base/java.net.Socket.connect(Socket.java:648)
@@ -751,7 +751,7 @@ Caused by: java.net.SocketTimeoutException: localhost:33253: Connect timed out
 	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.lang.Thread.run(Thread.java:832)
-Caused by: java.net.SocketTimeoutException: localhost:36173: Connect timed out
+Caused by: java.net.SocketTimeoutException: localhost:32979: Connect timed out
 	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
 	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
 	at java.base/java.net.Socket.connect(Socket.java:648)
@@ -786,7 +786,7 @@ Caused by: java.net.SocketTimeoutException: localhost:36173: Connect timed out
 	... 12 more
 ]]></failure>
 
-<failure message=" Expected to find 'localhost:36847: connect timed out' but got unexpected exception: java.net.SocketTimeoutException: localhost:36847: Connect timed out
+<failure message=" Expected to find 'localhost:35273: connect timed out' but got unexpected exception: java.net.SocketTimeoutException: localhost:35273: Connect timed out
  at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
  at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
  at java.base/java.net.Socket.connect(Socket.java:648)
@@ -824,7 +824,7 @@ Caused by: java.net.SocketTimeoutException: localhost:36173: Connect timed out
  at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
  at java.base/java.lang.Thread.run(Thread.java:832)
 " type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
- Expected to find 'localhost:36847: connect timed out' but got unexpected exception: java.net.SocketTimeoutException: localhost:36847: Connect timed out
+ Expected to find 'localhost:35273: connect timed out' but got unexpected exception: java.net.SocketTimeoutException: localhost:35273: Connect timed out
 	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
 	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
 	at java.base/java.net.Socket.connect(Socket.java:648)
@@ -877,7 +877,7 @@ Caused by: java.net.SocketTimeoutException: localhost:36173: Connect timed out
 	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.lang.Thread.run(Thread.java:832)
-Caused by: java.net.SocketTimeoutException: localhost:36847: Connect timed out
+Caused by: java.net.SocketTimeoutException: localhost:35273: Connect timed out
 	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
 	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
 	at java.base/java.net.Socket.connect(Socket.java:648)
@@ -905,7 +905,7 @@ Caused by: java.net.SocketTimeoutException: localhost:36847: Connect timed out
 	... 12 more
 ]]></failure>
 
-<failure message=" Expected to find 'localhost:39473: connect timed out' but got unexpected exception: java.net.SocketTimeoutException: localhost:39473: Connect timed out
+<failure message=" Expected to find 'localhost:37199: connect timed out' but got unexpected exception: java.net.SocketTimeoutException: localhost:37199: Connect timed out
  at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
  at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
  at java.base/java.net.Socket.connect(Socket.java:648)
@@ -947,7 +947,7 @@ Caused by: java.net.SocketTimeoutException: localhost:36847: Connect timed out
  at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
  at java.base/java.lang.Thread.run(Thread.java:832)
 " type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
- Expected to find 'localhost:39473: connect timed out' but got unexpected exception: java.net.SocketTimeoutException: localhost:39473: Connect timed out
+ Expected to find 'localhost:37199: connect timed out' but got unexpected exception: java.net.SocketTimeoutException: localhost:37199: Connect timed out
 	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
 	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
 	at java.base/java.net.Socket.connect(Socket.java:648)
@@ -1004,7 +1004,7 @@ Caused by: java.net.SocketTimeoutException: localhost:36847: Connect timed out
 	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.lang.Thread.run(Thread.java:832)
-Caused by: java.net.SocketTimeoutException: localhost:39473: Connect timed out
+Caused by: java.net.SocketTimeoutException: localhost:37199: Connect timed out
 	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
 	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
 	at java.base/java.net.Socket.connect(Socket.java:648)
@@ -1074,26 +1074,6 @@ Caused by: java.net.SocketTimeoutException: localhost:39473: Connect timed out
 	at org.junit.Assert.failNotEquals(Assert.java:835)
 	at org.junit.Assert.assertEquals(Assert.java:647)
 	at org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.TestFsVolumeList.testAddRplicaProcessorForAddingReplicaInMap(TestFsVolumeList.java:383)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:288)
-	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.lang.Thread.run(Thread.java:832)
-]]></failure>
-
-<failure message="expected:&lt;5&gt; but was:&lt;6&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<5> but was:<6>
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.failNotEquals(Assert.java:835)
-	at org.junit.Assert.assertEquals(Assert.java:647)
-	at org.junit.Assert.assertEquals(Assert.java:633)
-	at org.apache.hadoop.hdfs.TestDecommissionWithStriped.testDecommissionWithMissingBlock(TestDecommissionWithStriped.java:923)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)

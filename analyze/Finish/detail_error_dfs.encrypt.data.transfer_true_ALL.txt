@@ -224,7 +224,7 @@ Caused by: org.apache.hadoop.ipc.RemoteException(java.io.IOException): File /tes
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
 </failure>
 
-<failure message=" Expected to find 'localhost:42343: connect timed out' but got unexpected exception: java.net.SocketTimeoutException: localhost:42343: Connect timed out
+<failure message=" Expected to find 'localhost:46103: connect timed out' but got unexpected exception: java.net.SocketTimeoutException: localhost:46103: Connect timed out
  at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
  at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
  at java.base/java.net.Socket.connect(Socket.java:648)
@@ -262,7 +262,7 @@ Caused by: org.apache.hadoop.ipc.RemoteException(java.io.IOException): File /tes
  at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
  at java.base/java.lang.Thread.run(Thread.java:832)
 " type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
- Expected to find 'localhost:42343: connect timed out' but got unexpected exception: java.net.SocketTimeoutException: localhost:42343: Connect timed out
+ Expected to find 'localhost:46103: connect timed out' but got unexpected exception: java.net.SocketTimeoutException: localhost:46103: Connect timed out
 	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
 	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
 	at java.base/java.net.Socket.connect(Socket.java:648)
@@ -315,7 +315,7 @@ Caused by: org.apache.hadoop.ipc.RemoteException(java.io.IOException): File /tes
 	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.lang.Thread.run(Thread.java:832)
-Caused by: java.net.SocketTimeoutException: localhost:42343: Connect timed out
+Caused by: java.net.SocketTimeoutException: localhost:46103: Connect timed out
 	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
 	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
 	at java.base/java.net.Socket.connect(Socket.java:648)
@@ -343,7 +343,7 @@ Caused by: java.net.SocketTimeoutException: localhost:42343: Connect timed out
 	... 12 more
 ]]></failure>
 
-<failure message=" Expected to find 'localhost:40893: connect timed out' but got unexpected exception: java.net.SocketTimeoutException: localhost:40893: Connect timed out
+<failure message=" Expected to find 'localhost:34739: connect timed out' but got unexpected exception: java.net.SocketTimeoutException: localhost:34739: Connect timed out
  at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
  at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
  at java.base/java.net.Socket.connect(Socket.java:648)
@@ -388,7 +388,7 @@ Caused by: java.net.SocketTimeoutException: localhost:42343: Connect timed out
  at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
  at java.base/java.lang.Thread.run(Thread.java:832)
 " type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
- Expected to find 'localhost:40893: connect timed out' but got unexpected exception: java.net.SocketTimeoutException: localhost:40893: Connect timed out
+ Expected to find 'localhost:34739: connect timed out' but got unexpected exception: java.net.SocketTimeoutException: localhost:34739: Connect timed out
 	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
 	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
 	at java.base/java.net.Socket.connect(Socket.java:648)
@@ -448,7 +448,7 @@ Caused by: java.net.SocketTimeoutException: localhost:42343: Connect timed out
 	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.lang.Thread.run(Thread.java:832)
-Caused by: java.net.SocketTimeoutException: localhost:40893: Connect timed out
+Caused by: java.net.SocketTimeoutException: localhost:34739: Connect timed out
 	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
 	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
 	at java.base/java.net.Socket.connect(Socket.java:648)
@@ -483,7 +483,7 @@ Caused by: java.net.SocketTimeoutException: localhost:40893: Connect timed out
 	... 12 more
 ]]></failure>
 
-<failure message=" Expected to find 'localhost:39797: connect timed out' but got unexpected exception: java.net.SocketTimeoutException: localhost:39797: Connect timed out
+<failure message=" Expected to find 'localhost:33673: connect timed out' but got unexpected exception: java.net.SocketTimeoutException: localhost:33673: Connect timed out
  at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
  at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
  at java.base/java.net.Socket.connect(Socket.java:648)
@@ -521,7 +521,7 @@ Caused by: java.net.SocketTimeoutException: localhost:40893: Connect timed out
  at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
  at java.base/java.lang.Thread.run(Thread.java:832)
 " type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
- Expected to find 'localhost:39797: connect timed out' but got unexpected exception: java.net.SocketTimeoutException: localhost:39797: Connect timed out
+ Expected to find 'localhost:33673: connect timed out' but got unexpected exception: java.net.SocketTimeoutException: localhost:33673: Connect timed out
 	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
 	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
 	at java.base/java.net.Socket.connect(Socket.java:648)
@@ -574,7 +574,7 @@ Caused by: java.net.SocketTimeoutException: localhost:40893: Connect timed out
 	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.lang.Thread.run(Thread.java:832)
-Caused by: java.net.SocketTimeoutException: localhost:39797: Connect timed out
+Caused by: java.net.SocketTimeoutException: localhost:33673: Connect timed out
 	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
 	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
 	at java.base/java.net.Socket.connect(Socket.java:648)
@@ -602,7 +602,7 @@ Caused by: java.net.SocketTimeoutException: localhost:39797: Connect timed out
 	... 12 more
 ]]></failure>
 
-<failure message=" Expected to find 'localhost:39129: connect timed out' but got unexpected exception: java.net.SocketTimeoutException: localhost:39129: Connect timed out
+<failure message=" Expected to find 'localhost:46537: connect timed out' but got unexpected exception: java.net.SocketTimeoutException: localhost:46537: Connect timed out
  at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
  at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
  at java.base/java.net.Socket.connect(Socket.java:648)
@@ -644,7 +644,7 @@ Caused by: java.net.SocketTimeoutException: localhost:39797: Connect timed out
  at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
  at java.base/java.lang.Thread.run(Thread.java:832)
 " type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
- Expected to find 'localhost:39129: connect timed out' but got unexpected exception: java.net.SocketTimeoutException: localhost:39129: Connect timed out
+ Expected to find 'localhost:46537: connect timed out' but got unexpected exception: java.net.SocketTimeoutException: localhost:46537: Connect timed out
 	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
 	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
 	at java.base/java.net.Socket.connect(Socket.java:648)
@@ -701,7 +701,7 @@ Caused by: java.net.SocketTimeoutException: localhost:39797: Connect timed out
 	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.lang.Thread.run(Thread.java:832)
-Caused by: java.net.SocketTimeoutException: localhost:39129: Connect timed out
+Caused by: java.net.SocketTimeoutException: localhost:46537: Connect timed out
 	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
 	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
 	at java.base/java.net.Socket.connect(Socket.java:648)
@@ -733,7 +733,7 @@ Caused by: java.net.SocketTimeoutException: localhost:39129: Connect timed out
 	... 12 more
 ]]></failure>
 
-<failure message=" Expected to find 'localhost:44917: connect timed out' but got unexpected exception: java.net.SocketTimeoutException: localhost:44917: Connect timed out
+<failure message=" Expected to find 'localhost:43197: connect timed out' but got unexpected exception: java.net.SocketTimeoutException: localhost:43197: Connect timed out
  at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
  at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
  at java.base/java.net.Socket.connect(Socket.java:648)
@@ -771,7 +771,7 @@ Caused by: java.net.SocketTimeoutException: localhost:39129: Connect timed out
  at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
  at java.base/java.lang.Thread.run(Thread.java:832)
 " type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
- Expected to find 'localhost:44917: connect timed out' but got unexpected exception: java.net.SocketTimeoutException: localhost:44917: Connect timed out
+ Expected to find 'localhost:43197: connect timed out' but got unexpected exception: java.net.SocketTimeoutException: localhost:43197: Connect timed out
 	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
 	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
 	at java.base/java.net.Socket.connect(Socket.java:648)
@@ -824,7 +824,7 @@ Caused by: java.net.SocketTimeoutException: localhost:39129: Connect timed out
 	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.lang.Thread.run(Thread.java:832)
-Caused by: java.net.SocketTimeoutException: localhost:44917: Connect timed out
+Caused by: java.net.SocketTimeoutException: localhost:43197: Connect timed out
 	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
 	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
 	at java.base/java.net.Socket.connect(Socket.java:648)
@@ -852,7 +852,7 @@ Caused by: java.net.SocketTimeoutException: localhost:44917: Connect timed out
 	... 12 more
 ]]></failure>
 
-<failure message=" Expected to find 'localhost:42421: connect timed out' but got unexpected exception: java.net.SocketTimeoutException: localhost:42421: Connect timed out
+<failure message=" Expected to find 'localhost:34135: connect timed out' but got unexpected exception: java.net.SocketTimeoutException: localhost:34135: Connect timed out
  at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
  at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
  at java.base/java.net.Socket.connect(Socket.java:648)
@@ -897,7 +897,7 @@ Caused by: java.net.SocketTimeoutException: localhost:44917: Connect timed out
  at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
  at java.base/java.lang.Thread.run(Thread.java:832)
 " type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
- Expected to find 'localhost:42421: connect timed out' but got unexpected exception: java.net.SocketTimeoutException: localhost:42421: Connect timed out
+ Expected to find 'localhost:34135: connect timed out' but got unexpected exception: java.net.SocketTimeoutException: localhost:34135: Connect timed out
 	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
 	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
 	at java.base/java.net.Socket.connect(Socket.java:648)
@@ -957,7 +957,7 @@ Caused by: java.net.SocketTimeoutException: localhost:44917: Connect timed out
 	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.lang.Thread.run(Thread.java:832)
-Caused by: java.net.SocketTimeoutException: localhost:42421: Connect timed out
+Caused by: java.net.SocketTimeoutException: localhost:34135: Connect timed out
 	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
 	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
 	at java.base/java.net.Socket.connect(Socket.java:648)
@@ -992,7 +992,7 @@ Caused by: java.net.SocketTimeoutException: localhost:42421: Connect timed out
 	... 12 more
 ]]></failure>
 
-<failure message=" Expected to find 'localhost:45913: connect timed out' but got unexpected exception: java.net.SocketTimeoutException: localhost:45913: Connect timed out
+<failure message=" Expected to find 'localhost:37351: connect timed out' but got unexpected exception: java.net.SocketTimeoutException: localhost:37351: Connect timed out
  at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
  at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
  at java.base/java.net.Socket.connect(Socket.java:648)
@@ -1030,7 +1030,7 @@ Caused by: java.net.SocketTimeoutException: localhost:42421: Connect timed out
  at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
  at java.base/java.lang.Thread.run(Thread.java:832)
 " type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
- Expected to find 'localhost:45913: connect timed out' but got unexpected exception: java.net.SocketTimeoutException: localhost:45913: Connect timed out
+ Expected to find 'localhost:37351: connect timed out' but got unexpected exception: java.net.SocketTimeoutException: localhost:37351: Connect timed out
 	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
 	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
 	at java.base/java.net.Socket.connect(Socket.java:648)
@@ -1083,7 +1083,7 @@ Caused by: java.net.SocketTimeoutException: localhost:42421: Connect timed out
 	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.lang.Thread.run(Thread.java:832)
-Caused by: java.net.SocketTimeoutException: localhost:45913: Connect timed out
+Caused by: java.net.SocketTimeoutException: localhost:37351: Connect timed out
 	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
 	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
 	at java.base/java.net.Socket.connect(Socket.java:648)
@@ -1111,7 +1111,7 @@ Caused by: java.net.SocketTimeoutException: localhost:45913: Connect timed out
 	... 12 more
 ]]></failure>
 
-<failure message=" Expected to find 'localhost:37595: connect timed out' but got unexpected exception: java.net.SocketTimeoutException: localhost:37595: Connect timed out
+<failure message=" Expected to find 'localhost:46547: connect timed out' but got unexpected exception: java.net.SocketTimeoutException: localhost:46547: Connect timed out
  at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
  at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
  at java.base/java.net.Socket.connect(Socket.java:648)
@@ -1153,7 +1153,7 @@ Caused by: java.net.SocketTimeoutException: localhost:45913: Connect timed out
  at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
  at java.base/java.lang.Thread.run(Thread.java:832)
 " type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
- Expected to find 'localhost:37595: connect timed out' but got unexpected exception: java.net.SocketTimeoutException: localhost:37595: Connect timed out
+ Expected to find 'localhost:46547: connect timed out' but got unexpected exception: java.net.SocketTimeoutException: localhost:46547: Connect timed out
 	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
 	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
 	at java.base/java.net.Socket.connect(Socket.java:648)
@@ -1210,7 +1210,7 @@ Caused by: java.net.SocketTimeoutException: localhost:45913: Connect timed out
 	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.lang.Thread.run(Thread.java:832)
-Caused by: java.net.SocketTimeoutException: localhost:37595: Connect timed out
+Caused by: java.net.SocketTimeoutException: localhost:46547: Connect timed out
 	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
 	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
 	at java.base/java.net.Socket.connect(Socket.java:648)
@@ -1312,6 +1312,39 @@ Caused by: java.net.SocketTimeoutException: localhost:37595: Connect timed out
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
 </failure>
 
+<failure message="Read after lease renewal failure failed" type="java.lang.AssertionError">java.lang.AssertionError: Read after lease renewal failure failed
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.apache.hadoop.hdfs.TestLease.testLeaseAbort(TestLease.java:145)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+</failure>
+
 <failure message="TestNativeCodeLoader: libhadoop.so testing was required, but libhadoop.so was not loaded.  LD_LIBRARY_PATH = ${env.LD_LIBRARY_PATH}:/users/LHZ/hadoop-3.3.1-src/hadoop-hdfs-project/hadoop-hdfs/target/native/target/usr/local/lib:/users/LHZ/hadoop-3.3.1-src/hadoop-hdfs-project/hadoop-hdfs/../../hadoop-common-project/hadoop-common/target/native/target/usr/local/lib" type="java.lang.AssertionError">java.lang.AssertionError: TestNativeCodeLoader: libhadoop.so testing was required, but libhadoop.so was not loaded.  LD_LIBRARY_PATH = ${env.LD_LIBRARY_PATH}:/users/LHZ/hadoop-3.3.1-src/hadoop-hdfs-project/hadoop-hdfs/target/native/target/usr/local/lib:/users/LHZ/hadoop-3.3.1-src/hadoop-hdfs-project/hadoop-hdfs/../../hadoop-common-project/hadoop-common/target/native/target/usr/local/lib
 	at org.junit.Assert.fail(Assert.java:89)
 	at org.apache.hadoop.fs.TestHdfsNativeCodeLoader.testNativeCodeLoaded(TestHdfsNativeCodeLoader.java:47)
@@ -1367,28 +1400,6 @@ Caused by: java.net.SocketTimeoutException: localhost:37595: Connect timed out
 	at java.base/java.lang.Thread.run(Thread.java:832)
 ]]></failure>
 
-<failure message="Tools should exit 0 on success expected:&lt;0&gt; but was:&lt;-3&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Tools should exit 0 on success expected:<0> but was:<-3>
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.failNotEquals(Assert.java:835)
-	at org.junit.Assert.assertEquals(Assert.java:647)
-	at org.apache.hadoop.hdfs.server.balancer.TestBalancer.runBalancerCli(TestBalancer.java:910)
-	at org.apache.hadoop.hdfs.server.balancer.TestBalancer.doTest(TestBalancer.java:752)
-	at org.apache.hadoop.hdfs.server.balancer.TestBalancer.doTest(TestBalancer.java:621)
-	at org.apache.hadoop.hdfs.server.balancer.TestBalancer.testBalancerCliWithIncludeListWithPortsInAFile(TestBalancer.java:1412)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:288)
-	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.lang.Thread.run(Thread.java:832)
-]]></failure>
-
 <failure message="expected:&lt;0&gt; but was:&lt;-3&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<0> but was:<-3>
 	at org.junit.Assert.fail(Assert.java:89)
 	at org.junit.Assert.failNotEquals(Assert.java:835)
@@ -1410,29 +1421,7 @@ Caused by: java.net.SocketTimeoutException: localhost:37595: Connect timed out
 	at java.base/java.lang.Thread.run(Thread.java:832)
 ]]></failure>
 
-<failure message="Tools should exit 0 on success expected:&lt;0&gt; but was:&lt;-3&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Tools should exit 0 on success expected:<0> but was:<-3>
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.failNotEquals(Assert.java:835)
-	at org.junit.Assert.assertEquals(Assert.java:647)
-	at org.apache.hadoop.hdfs.server.balancer.TestBalancer.runBalancerCli(TestBalancer.java:910)
-	at org.apache.hadoop.hdfs.server.balancer.TestBalancer.doTest(TestBalancer.java:752)
-	at org.apache.hadoop.hdfs.server.balancer.TestBalancer.doTest(TestBalancer.java:621)
-	at org.apache.hadoop.hdfs.server.balancer.TestBalancer.testBalancerCliWithExcludeListWithPortsInAFile(TestBalancer.java:1322)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:288)
-	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.lang.Thread.run(Thread.java:832)
-]]></failure>
-
-<failure message="Tools should exit 0 on success expected:&lt;0&gt; but was:&lt;-3&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Tools should exit 0 on success expected:<0> but was:<-3>
+<failure message="Tools should exit 0 on success expected:&lt;0&gt; but was:&lt;-4&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Tools should exit 0 on success expected:<0> but was:<-4>
 	at org.junit.Assert.fail(Assert.java:89)
 	at org.junit.Assert.failNotEquals(Assert.java:835)
 	at org.junit.Assert.assertEquals(Assert.java:647)
@@ -1454,19 +1443,12 @@ Caused by: java.net.SocketTimeoutException: localhost:37595: Connect timed out
 	at java.base/java.lang.Thread.run(Thread.java:832)
 ]]></failure>
 
-<failure message="expected:&lt;0&gt; but was:&lt;-3&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<0> but was:<-3>
+<failure message="One of the tests failed. See the Detailed results to identify the command that failed" type="java.lang.AssertionError">java.lang.AssertionError: One of the tests failed. See the Detailed results to identify the command that failed
 	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.failNotEquals(Assert.java:835)
-	at org.junit.Assert.assertEquals(Assert.java:647)
-	at org.junit.Assert.assertEquals(Assert.java:633)
-	at org.apache.hadoop.hdfs.server.balancer.TestBalancer.testUnknownDatanode(TestBalancer.java:1005)
-	at org.apache.hadoop.hdfs.server.balancer.TestBalancer.access$000(TestBalancer.java:125)
-	at org.apache.hadoop.hdfs.server.balancer.TestBalancer$1.run(TestBalancer.java:1637)
-	at org.apache.hadoop.hdfs.server.balancer.TestBalancer$1.run(TestBalancer.java:1633)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:691)
-	at java.base/javax.security.auth.Subject.doAs(Subject.java:425)
-	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1878)
-	at org.apache.hadoop.hdfs.server.balancer.TestBalancer.testBalancerWithKeytabs(TestBalancer.java:1633)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.apache.hadoop.cli.CLITestHelper.displayResults(CLITestHelper.java:264)
+	at org.apache.hadoop.cli.CLITestHelper.tearDown(CLITestHelper.java:126)
+	at org.apache.hadoop.cli.TestAclCLI.tearDown(TestAclCLI.java:55)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1474,58 +1456,29 @@ Caused by: java.net.SocketTimeoutException: localhost:37595: Connect timed out
 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:288)
-	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.lang.Thread.run(Thread.java:832)
-]]></failure>
-
-<failure message="Tools should exit 0 on success expected:&lt;0&gt; but was:&lt;-4&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Tools should exit 0 on success expected:<0> but was:<-4>
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.failNotEquals(Assert.java:835)
-	at org.junit.Assert.assertEquals(Assert.java:647)
-	at org.apache.hadoop.hdfs.server.balancer.TestBalancer.runBalancerCli(TestBalancer.java:910)
-	at org.apache.hadoop.hdfs.server.balancer.TestBalancer.doTest(TestBalancer.java:752)
-	at org.apache.hadoop.hdfs.server.balancer.TestBalancer.doTest(TestBalancer.java:621)
-	at org.apache.hadoop.hdfs.server.balancer.TestBalancer.testBalancerCliWithIncludeList(TestBalancer.java:1367)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:288)
-	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.lang.Thread.run(Thread.java:832)
-]]></failure>
-
-<failure message="expected:&lt;0&gt; but was:&lt;-3&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<0> but was:<-3>
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.failNotEquals(Assert.java:835)
-	at org.junit.Assert.assertEquals(Assert.java:647)
-	at org.junit.Assert.assertEquals(Assert.java:633)
-	at org.apache.hadoop.hdfs.server.balancer.TestBalancer.runBalancer(TestBalancer.java:786)
-	at org.apache.hadoop.hdfs.server.balancer.TestBalancer.runBalancer(TestBalancer.java:765)
-	at org.apache.hadoop.hdfs.server.balancer.TestBalancer.testUnevenDistribution(TestBalancer.java:401)
-	at org.apache.hadoop.hdfs.server.balancer.TestBalancer.testBalancer1Internal(TestBalancer.java:1053)
-	at org.apache.hadoop.hdfs.server.balancer.TestBalancer.testBalancer1(TestBalancer.java:1048)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:288)
-	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.lang.Thread.run(Thread.java:832)
-]]></failure>
+	at org.junit.internal.runners.statements.RunAfters.invokeMethod(RunAfters.java:46)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+</failure>
 
 <failure message="Failed to add all the replica to map" type="java.lang.AssertionError">java.lang.AssertionError: Failed to add all the replica to map
 	at org.junit.Assert.fail(Assert.java:89)
@@ -1580,8 +1533,48 @@ Caused by: java.net.SocketTimeoutException: localhost:37595: Connect timed out
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
 </failure>
 
-<failure message="There are 1 exception(s):
-  Exception 0: org.apache.hadoop.ipc.RemoteException(java.io.IOException): File /testNamenodeRestart/file could only be written to 0 of the 1 minReplication nodes. There are 3 datanode(s) running and 3 node(s) are excluded in this operation.
+<failure message="There are 2 exception(s):
+  Exception 0: org.apache.hadoop.ipc.RemoteException(java.io.IOException): File /testNamenodeRestart/file4 could only be written to 0 of the 1 minReplication nodes. There are 3 datanode(s) running and 3 node(s) are excluded in this operation.
+ at org.apache.hadoop.hdfs.server.blockmanagement.BlockManager.chooseTarget4NewBlock(BlockManager.java:2329)
+ at org.apache.hadoop.hdfs.server.namenode.FSDirWriteFileOp.chooseTargetForNewBlock(FSDirWriteFileOp.java:294)
+ at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getAdditionalBlock(FSNamesystem.java:2942)
+ at org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer.addBlock(NameNodeRpcServer.java:915)
+ at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolServerSideTranslatorPB.addBlock(ClientNamenodeProtocolServerSideTranslatorPB.java:593)
+ at org.apache.hadoop.hdfs.protocol.proto.ClientNamenodeProtocolProtos$ClientNamenodeProtocol$2.callBlockingMethod(ClientNamenodeProtocolProtos.java)
+ at org.apache.hadoop.ipc.ProtobufRpcEngine2$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine2.java:600)
+ at org.apache.hadoop.ipc.ProtobufRpcEngine2$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine2.java:568)
+ at org.apache.hadoop.ipc.ProtobufRpcEngine2$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine2.java:552)
+ at org.apache.hadoop.ipc.RPC$Server.call(RPC.java:1093)
+ at org.apache.hadoop.ipc.Server$RpcCall.run(Server.java:1035)
+ at org.apache.hadoop.ipc.Server$RpcCall.run(Server.java:963)
+ at java.base/java.security.AccessController.doPrivileged(AccessController.java:691)
+ at java.base/javax.security.auth.Subject.doAs(Subject.java:425)
+ at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1878)
+ at org.apache.hadoop.ipc.Server$Handler.run(Server.java:2966)
+
+ at org.apache.hadoop.ipc.Client.getRpcResponse(Client.java:1573)
+ at org.apache.hadoop.ipc.Client.call(Client.java:1519)
+ at org.apache.hadoop.ipc.Client.call(Client.java:1416)
+ at org.apache.hadoop.ipc.ProtobufRpcEngine2$Invoker.invoke(ProtobufRpcEngine2.java:242)
+ at org.apache.hadoop.ipc.ProtobufRpcEngine2$Invoker.invoke(ProtobufRpcEngine2.java:129)
+ at com.sun.proxy.$Proxy25.addBlock(Unknown Source)
+ at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolTranslatorPB.addBlock(ClientNamenodeProtocolTranslatorPB.java:530)
+ at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+ at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+ at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+ at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+ at org.apache.hadoop.io.retry.RetryInvocationHandler.invokeMethod(RetryInvocationHandler.java:422)
+ at org.apache.hadoop.io.retry.RetryInvocationHandler$Call.invokeMethod(RetryInvocationHandler.java:165)
+ at org.apache.hadoop.io.retry.RetryInvocationHandler$Call.invoke(RetryInvocationHandler.java:157)
+ at org.apache.hadoop.io.retry.RetryInvocationHandler$Call.invokeOnce(RetryInvocationHandler.java:95)
+ at org.apache.hadoop.io.retry.RetryInvocationHandler.invoke(RetryInvocationHandler.java:359)
+ at com.sun.proxy.$Proxy26.addBlock(Unknown Source)
+ at org.apache.hadoop.hdfs.DFSOutputStream.addBlock(DFSOutputStream.java:1084)
+ at org.apache.hadoop.hdfs.DataStreamer.locateFollowingBlock(DataStreamer.java:1898)
+ at org.apache.hadoop.hdfs.DataStreamer.nextBlockOutputStream(DataStreamer.java:1700)
+ at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:707)
+
+  Exception 1: org.apache.hadoop.ipc.RemoteException(java.io.IOException): File /testNamenodeRestart/file could only be written to 0 of the 1 minReplication nodes. There are 3 datanode(s) running and 3 node(s) are excluded in this operation.
  at org.apache.hadoop.hdfs.server.blockmanagement.BlockManager.chooseTarget4NewBlock(BlockManager.java:2329)
  at org.apache.hadoop.hdfs.server.namenode.FSDirWriteFileOp.chooseTargetForNewBlock(FSDirWriteFileOp.java:294)
  at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getAdditionalBlock(FSNamesystem.java:2942)
@@ -1621,8 +1614,48 @@ Caused by: java.net.SocketTimeoutException: localhost:37595: Connect timed out
  at org.apache.hadoop.hdfs.DataStreamer.nextBlockOutputStream(DataStreamer.java:1700)
  at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:707)
 " type="java.lang.AssertionError">java.lang.AssertionError: 
-There are 1 exception(s):
-  Exception 0: org.apache.hadoop.ipc.RemoteException(java.io.IOException): File /testNamenodeRestart/file could only be written to 0 of the 1 minReplication nodes. There are 3 datanode(s) running and 3 node(s) are excluded in this operation.
+There are 2 exception(s):
+  Exception 0: org.apache.hadoop.ipc.RemoteException(java.io.IOException): File /testNamenodeRestart/file4 could only be written to 0 of the 1 minReplication nodes. There are 3 datanode(s) running and 3 node(s) are excluded in this operation.
+	at org.apache.hadoop.hdfs.server.blockmanagement.BlockManager.chooseTarget4NewBlock(BlockManager.java:2329)
+	at org.apache.hadoop.hdfs.server.namenode.FSDirWriteFileOp.chooseTargetForNewBlock(FSDirWriteFileOp.java:294)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getAdditionalBlock(FSNamesystem.java:2942)
+	at org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer.addBlock(NameNodeRpcServer.java:915)
+	at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolServerSideTranslatorPB.addBlock(ClientNamenodeProtocolServerSideTranslatorPB.java:593)
+	at org.apache.hadoop.hdfs.protocol.proto.ClientNamenodeProtocolProtos$ClientNamenodeProtocol$2.callBlockingMethod(ClientNamenodeProtocolProtos.java)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine2$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine2.java:600)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine2$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine2.java:568)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine2$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine2.java:552)
+	at org.apache.hadoop.ipc.RPC$Server.call(RPC.java:1093)
+	at org.apache.hadoop.ipc.Server$RpcCall.run(Server.java:1035)
+	at org.apache.hadoop.ipc.Server$RpcCall.run(Server.java:963)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:691)
+	at java.base/javax.security.auth.Subject.doAs(Subject.java:425)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1878)
+	at org.apache.hadoop.ipc.Server$Handler.run(Server.java:2966)
+
+	at org.apache.hadoop.ipc.Client.getRpcResponse(Client.java:1573)
+	at org.apache.hadoop.ipc.Client.call(Client.java:1519)
+	at org.apache.hadoop.ipc.Client.call(Client.java:1416)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine2$Invoker.invoke(ProtobufRpcEngine2.java:242)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine2$Invoker.invoke(ProtobufRpcEngine2.java:129)
+	at com.sun.proxy.$Proxy25.addBlock(Unknown Source)
+	at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolTranslatorPB.addBlock(ClientNamenodeProtocolTranslatorPB.java:530)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler.invokeMethod(RetryInvocationHandler.java:422)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler$Call.invokeMethod(RetryInvocationHandler.java:165)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler$Call.invoke(RetryInvocationHandler.java:157)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler$Call.invokeOnce(RetryInvocationHandler.java:95)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler.invoke(RetryInvocationHandler.java:359)
+	at com.sun.proxy.$Proxy26.addBlock(Unknown Source)
+	at org.apache.hadoop.hdfs.DFSOutputStream.addBlock(DFSOutputStream.java:1084)
+	at org.apache.hadoop.hdfs.DataStreamer.locateFollowingBlock(DataStreamer.java:1898)
+	at org.apache.hadoop.hdfs.DataStreamer.nextBlockOutputStream(DataStreamer.java:1700)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:707)
+
+  Exception 1: org.apache.hadoop.ipc.RemoteException(java.io.IOException): File /testNamenodeRestart/file could only be written to 0 of the 1 minReplication nodes. There are 3 datanode(s) running and 3 node(s) are excluded in this operation.
 	at org.apache.hadoop.hdfs.server.blockmanagement.BlockManager.chooseTarget4NewBlock(BlockManager.java:2329)
 	at org.apache.hadoop.hdfs.server.namenode.FSDirWriteFileOp.chooseTargetForNewBlock(FSDirWriteFileOp.java:294)
 	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getAdditionalBlock(FSNamesystem.java:2942)
@@ -1788,82 +1821,6 @@ Excluded DataNodes should be forgiven after a while and not cause file writing e
 	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.lang.Thread.run(Thread.java:832)
-]]></failure>
-
-<failure message="expected:&lt;5&gt; but was:&lt;3&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<5> but was:<3>
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.failNotEquals(Assert.java:835)
-	at org.junit.Assert.assertEquals(Assert.java:647)
-	at org.junit.Assert.assertEquals(Assert.java:633)
-	at org.apache.hadoop.hdfs.TestBlockStoragePolicy.checkLocatedBlocks(TestBlockStoragePolicy.java:1108)
-	at org.apache.hadoop.hdfs.TestBlockStoragePolicy.testChangeFileRep(TestBlockStoragePolicy.java:1150)
-	at org.apache.hadoop.hdfs.TestBlockStoragePolicy.testChangeHotFileRep(TestBlockStoragePolicy.java:1179)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
-]]></failure>
-
-<failure message="expected:&lt;5&gt; but was:&lt;3&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<5> but was:<3>
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.failNotEquals(Assert.java:835)
-	at org.junit.Assert.assertEquals(Assert.java:647)
-	at org.junit.Assert.assertEquals(Assert.java:633)
-	at org.apache.hadoop.hdfs.TestBlockStoragePolicy.checkLocatedBlocks(TestBlockStoragePolicy.java:1108)
-	at org.apache.hadoop.hdfs.TestBlockStoragePolicy.testChangeFileRep(TestBlockStoragePolicy.java:1150)
-	at org.apache.hadoop.hdfs.TestBlockStoragePolicy.testChangeColdRep(TestBlockStoragePolicy.java:1206)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
 ]]></failure>
 
 <failure message="expected:&lt;5&gt; but was:&lt;3&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<5> but was:<3>
@@ -2187,6 +2144,44 @@ Caused by: org.apache.hadoop.ipc.RemoteException(java.io.IOException): File /bac
 	at org.junit.Assert.assertEquals(Assert.java:633)
 	at org.apache.hadoop.hdfs.server.balancer.TestBalancerWithMultipleNameNodes.runBalancer(TestBalancerWithMultipleNameNodes.java:187)
 	at org.apache.hadoop.hdfs.server.balancer.TestBalancerWithMultipleNameNodes.runTest(TestBalancerWithMultipleNameNodes.java:551)
+	at org.apache.hadoop.hdfs.server.balancer.TestBalancerWithMultipleNameNodes.testTwoOneOne(TestBalancerWithMultipleNameNodes.java:566)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+]]></failure>
+
+<failure message="expected:&lt;0&gt; but was:&lt;-3&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<0> but was:<-3>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at org.junit.Assert.assertEquals(Assert.java:633)
+	at org.apache.hadoop.hdfs.server.balancer.TestBalancerWithMultipleNameNodes.runBalancer(TestBalancerWithMultipleNameNodes.java:187)
+	at org.apache.hadoop.hdfs.server.balancer.TestBalancerWithMultipleNameNodes.runTest(TestBalancerWithMultipleNameNodes.java:551)
 	at org.apache.hadoop.hdfs.server.balancer.TestBalancerWithMultipleNameNodes.testBalancingBlockpoolsWithBlockPoolPolicy(TestBalancerWithMultipleNameNodes.java:610)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
@@ -2243,26 +2238,6 @@ Caused by: org.apache.hadoop.ipc.RemoteException(java.io.IOException): File /bac
 	at java.base/java.lang.Thread.run(Thread.java:832)
 </failure>
 
-<failure message="expected:&lt;1&gt; but was:&lt;0&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<1> but was:<0>
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.failNotEquals(Assert.java:835)
-	at org.junit.Assert.assertEquals(Assert.java:647)
-	at org.junit.Assert.assertEquals(Assert.java:633)
-	at org.apache.hadoop.hdfs.TestDecommissionWithStriped.testDecommissionWithURBlockForSameBlockGroup(TestDecommissionWithStriped.java:281)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:288)
-	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.lang.Thread.run(Thread.java:832)
-]]></failure>
-
 <failure message="expected:&lt;-2&gt; but was:&lt;-3&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<-2> but was:<-3>
 	at org.junit.Assert.fail(Assert.java:89)
 	at org.junit.Assert.failNotEquals(Assert.java:835)
@@ -2288,28 +2263,13 @@ Caused by: org.apache.hadoop.ipc.RemoteException(java.io.IOException): File /bac
 	at org.junit.Assert.failNotEquals(Assert.java:835)
 	at org.junit.Assert.assertEquals(Assert.java:647)
 	at org.junit.Assert.assertEquals(Assert.java:633)
-	at org.apache.hadoop.hdfs.server.balancer.TestBalancerWithHANameNodes.doTest(TestBalancerWithHANameNodes.java:135)
-	at org.apache.hadoop.hdfs.server.balancer.TestBalancerWithHANameNodes.testBalancerWithHANameNodes(TestBalancerWithHANameNodes.java:102)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:288)
-	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.lang.Thread.run(Thread.java:832)
-]]></failure>
-
-<failure message="OP_READ_BLOCK failed due to reasons other than access token: " type="java.lang.AssertionError">java.lang.AssertionError: OP_READ_BLOCK failed due to reasons other than access token: 
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.assertTrue(Assert.java:42)
-	at org.apache.hadoop.hdfs.server.blockmanagement.TestBlockTokenWithDFS.tryRead(TestBlockTokenWithDFS.java:206)
-	at org.apache.hadoop.hdfs.server.blockmanagement.TestBlockTokenWithDFS.doTestRead(TestBlockTokenWithDFS.java:434)
-	at org.apache.hadoop.hdfs.server.blockmanagement.TestBlockTokenWithDFS.testRead(TestBlockTokenWithDFS.java:360)
+	at org.apache.hadoop.hdfs.server.balancer.TestBalancer.runBalancer(TestBalancer.java:786)
+	at org.apache.hadoop.hdfs.server.balancer.TestBalancer.doTest(TestBalancer.java:754)
+	at org.apache.hadoop.hdfs.server.balancer.TestBalancer.doTest(TestBalancer.java:621)
+	at org.apache.hadoop.hdfs.server.balancer.TestBalancer.doTest(TestBalancer.java:615)
+	at org.apache.hadoop.hdfs.server.balancer.TestBalancer.oneNodeTest(TestBalancer.java:926)
+	at org.apache.hadoop.hdfs.server.balancer.TestBalancer.integrationTest(TestBalancer.java:939)
+	at org.apache.hadoop.hdfs.server.blockmanagement.TestBlockTokenWithDFS.testEnd2End(TestBlockTokenWithDFS.java:629)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -2338,67 +2298,6 @@ Caused by: org.apache.hadoop.ipc.RemoteException(java.io.IOException): File /bac
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
-</failure>
-
-<failure message="Sink did not produce the expected output. Actual output was: " type="java.lang.AssertionError">java.lang.AssertionError: Sink did not produce the expected output. Actual output was: 
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.assertTrue(Assert.java:42)
-	at org.apache.hadoop.metrics2.sink.RollingFileSystemSinkTestBase.assertMetricsContents(RollingFileSystemSinkTestBase.java:345)
-	at org.apache.hadoop.metrics2.sink.TestRollingFileSystemSinkWithHdfs.testSilentOverwrite(TestRollingFileSystemSinkWithHdfs.java:138)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
-	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:61)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
-</failure>
-
-<failure message="expected:&lt;0&gt; but was:&lt;-3&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<0> but was:<-3>
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.failNotEquals(Assert.java:835)
-	at org.junit.Assert.assertEquals(Assert.java:647)
-	at org.junit.Assert.assertEquals(Assert.java:633)
-	at org.apache.hadoop.hdfs.server.balancer.TestBalancerWithNodeGroup.runBalancer(TestBalancerWithNodeGroup.java:181)
-	at org.apache.hadoop.hdfs.server.balancer.TestBalancerWithNodeGroup.testBalancerWithNodeGroup(TestBalancerWithNodeGroup.java:314)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:288)
-	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.lang.Thread.run(Thread.java:832)
 ]]></failure>
 
 <failure message="expected:&lt;200&gt; but was:&lt;403&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<200> but was:<403>
@@ -2846,44 +2745,6 @@ Expected: is <3>
 	at java.base/java.lang.Thread.run(Thread.java:832)
 ]]></failure>
 
-<failure message="Movement to ARCHIVE should be successful expected:&lt;0&gt; but was:&lt;-3&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Movement to ARCHIVE should be successful expected:<0> but was:<-3>
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.failNotEquals(Assert.java:835)
-	at org.junit.Assert.assertEquals(Assert.java:647)
-	at org.apache.hadoop.hdfs.server.mover.TestMover.testMoverWithStripedFile(TestMover.java:898)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:288)
-	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.lang.Thread.run(Thread.java:832)
-]]></failure>
-
-<failure message="Retcode expected to be ExitStatus.SUCCESS (0). expected:&lt;0&gt; but was:&lt;-3&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Retcode expected to be ExitStatus.SUCCESS (0). expected:<0> but was:<-3>
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.failNotEquals(Assert.java:835)
-	at org.junit.Assert.assertEquals(Assert.java:647)
-	at org.apache.hadoop.hdfs.server.mover.TestMover.testBalancerMaxIterationTimeNotAffectMover(TestMover.java:784)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:288)
-	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:282)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.lang.Thread.run(Thread.java:832)
-]]></failure>
-
 <failure message="Movement to DISK should be successful expected:&lt;0&gt; but was:&lt;-3&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Movement to DISK should be successful expected:<0> but was:<-3>
 	at org.junit.Assert.fail(Assert.java:89)
 	at org.junit.Assert.failNotEquals(Assert.java:835)
@@ -3036,51 +2897,7 @@ Expected: is <3>
 	at org.apache.hadoop.hdfs.server.balancer.TestBalancer.doTest(TestBalancer.java:615)
 	at org.apache.hadoop.hdfs.server.balancer.TestBalancer.oneNodeTest(TestBalancer.java:926)
 	at org.apache.hadoop.hdfs.server.balancer.TestBalancer.testBalancer0Internal(TestBalancer.java:1041)
-	at org.apache.hadoop.hdfs.server.balancer.TestBalancerWithSaslDataTransfer.testBalancer0Authentication(TestBalancerWithSaslDataTransfer.java:29)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
-]]></failure>
-
-<failure message="expected:&lt;0&gt; but was:&lt;-3&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<0> but was:<-3>
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.failNotEquals(Assert.java:835)
-	at org.junit.Assert.assertEquals(Assert.java:647)
-	at org.junit.Assert.assertEquals(Assert.java:633)
-	at org.apache.hadoop.hdfs.server.balancer.TestBalancer.runBalancer(TestBalancer.java:786)
-	at org.apache.hadoop.hdfs.server.balancer.TestBalancer.doTest(TestBalancer.java:754)
-	at org.apache.hadoop.hdfs.server.balancer.TestBalancer.doTest(TestBalancer.java:621)
-	at org.apache.hadoop.hdfs.server.balancer.TestBalancer.doTest(TestBalancer.java:615)
-	at org.apache.hadoop.hdfs.server.balancer.TestBalancer.twoNodeTest(TestBalancer.java:932)
-	at org.apache.hadoop.hdfs.server.balancer.TestBalancer.testBalancer0Internal(TestBalancer.java:1042)
-	at org.apache.hadoop.hdfs.server.balancer.TestBalancerWithSaslDataTransfer.testBalancer0Privacy(TestBalancerWithSaslDataTransfer.java:39)
+	at org.apache.hadoop.hdfs.server.balancer.TestBalancerWithSaslDataTransfer.testBalancer0Integrity(TestBalancerWithSaslDataTransfer.java:34)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -3256,9 +3073,9 @@ Expected: is <3>
 </failure>
 
 <failure message="Test resulted in an unexpected exit" type="java.lang.AssertionError">java.lang.AssertionError: Test resulted in an unexpected exit
-	at org.apache.hadoop.hdfs.MiniDFSCluster.shutdown(MiniDFSCluster.java:2198)
-	at org.apache.hadoop.hdfs.MiniDFSCluster.shutdown(MiniDFSCluster.java:2185)
-	at org.apache.hadoop.hdfs.MiniDFSCluster.shutdown(MiniDFSCluster.java:2178)
+	at org.apache.hadoop.hdfs.MiniDFSCluster.shutdown(MiniDFSCluster.java:2202)
+	at org.apache.hadoop.hdfs.MiniDFSCluster.shutdown(MiniDFSCluster.java:2187)
+	at org.apache.hadoop.hdfs.MiniDFSCluster.shutdown(MiniDFSCluster.java:2180)
 	at org.apache.hadoop.hdfs.server.namenode.ha.TestPipelinesFailover.doTestWriteOverFailoverWithDnFail(TestPipelinesFailover.java:267)
 	at org.apache.hadoop.hdfs.server.namenode.ha.TestPipelinesFailover.testWriteOverGracefulFailoverWithDnFail(TestPipelinesFailover.java:210)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -3276,9 +3093,9 @@ Expected: is <3>
 </failure>
 
 <failure message="Test resulted in an unexpected exit" type="java.lang.AssertionError">java.lang.AssertionError: Test resulted in an unexpected exit
-	at org.apache.hadoop.hdfs.MiniDFSCluster.shutdown(MiniDFSCluster.java:2198)
-	at org.apache.hadoop.hdfs.MiniDFSCluster.shutdown(MiniDFSCluster.java:2185)
-	at org.apache.hadoop.hdfs.MiniDFSCluster.shutdown(MiniDFSCluster.java:2178)
+	at org.apache.hadoop.hdfs.MiniDFSCluster.shutdown(MiniDFSCluster.java:2202)
+	at org.apache.hadoop.hdfs.MiniDFSCluster.shutdown(MiniDFSCluster.java:2187)
+	at org.apache.hadoop.hdfs.MiniDFSCluster.shutdown(MiniDFSCluster.java:2180)
 	at org.apache.hadoop.hdfs.server.namenode.ha.TestPipelinesFailover.doWriteOverFailoverTest(TestPipelinesFailover.java:199)
 	at org.apache.hadoop.hdfs.server.namenode.ha.TestPipelinesFailover.testAllocateBlockAfterCrashFailover(TestPipelinesFailover.java:131)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -3295,19 +3112,105 @@ Expected: is <3>
 	at java.base/java.lang.Thread.run(Thread.java:832)
 </failure>
 
-<failure message="failed testCase at i=0, blockLengths=org.apache.hadoop.hdfs.TestLeaseRecoveryStriped$BlockLengths@96897c8[blockLengths={4194304,1048576,4194304,3145728,3145728,4194304,2097152,2097152,4194304},safeLength=18874368]
-java.io.IOException: Could not get block locations. Source file &quot;/TestLeaseRecoveryStriped/testfile&quot; - Aborting...#2: failed, block==null
- at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1508)
- at org.apache.hadoop.hdfs.DataStreamer.processDatanodeOrExternalError(DataStreamer.java:1287)
- at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:668)
- at org.apache.hadoop.hdfs.StripedDataStreamer.run(StripedDataStreamer.java:46)
+<failure message="failed testCase at i=0, blockLengths=org.apache.hadoop.hdfs.TestLeaseRecoveryStriped$BlockLengths@798deee8[blockLengths={3145728,2097152,4194304,3145728,4194304,1048576,2097152,1048576,1048576},safeLength=12582912]
+java.net.SocketException: Connection reset
+ at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:367)
+ at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:398)
+ at org.apache.hadoop.net.SocketInputStream$Reader.performIO(SocketInputStream.java:57)
+ at org.apache.hadoop.net.SocketIOWithTimeout.doIO(SocketIOWithTimeout.java:142)
+ at org.apache.hadoop.net.SocketInputStream.read(SocketInputStream.java:161)
+ at org.apache.hadoop.net.SocketInputStream.read(SocketInputStream.java:131)
+ at org.apache.hadoop.net.SocketInputStream.read(SocketInputStream.java:118)
+ at java.base/java.io.FilterInputStream.read(FilterInputStream.java:82)
+ at org.apache.hadoop.hdfs.protocolPB.PBHelperClient.vintPrefixed(PBHelperClient.java:519)
+ at org.apache.hadoop.hdfs.client.impl.BlockReaderRemote.newBlockReader(BlockReaderRemote.java:414)
+ at org.apache.hadoop.hdfs.client.impl.BlockReaderFactory.getRemoteBlockReader(BlockReaderFactory.java:858)
+ at org.apache.hadoop.hdfs.client.impl.BlockReaderFactory.getRemoteBlockReaderFromTcp(BlockReaderFactory.java:754)
+ at org.apache.hadoop.hdfs.client.impl.BlockReaderFactory.build(BlockReaderFactory.java:381)
+ at org.apache.hadoop.hdfs.client.impl.BlockReaderTestUtil.getBlockReader(BlockReaderTestUtil.java:228)
+ at org.apache.hadoop.hdfs.StripedFileTestUtil.checkData(StripedFileTestUtil.java:439)
+ at org.apache.hadoop.hdfs.TestLeaseRecoveryStriped.runTest(TestLeaseRecoveryStriped.java:202)
+ at org.apache.hadoop.hdfs.TestLeaseRecoveryStriped.testLeaseRecovery(TestLeaseRecoveryStriped.java:183)
+ at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+ at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+ at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+ at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+ at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+ at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+ at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+ at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+ at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+ at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+ at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+ at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+ at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+ at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+ at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+ at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+ at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+ at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+ at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+ at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+ at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+ at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+ at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
+ at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273)
+ at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+ at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
+ at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+ at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+ at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
 " type="java.lang.AssertionError">java.lang.AssertionError: 
-failed testCase at i=0, blockLengths=org.apache.hadoop.hdfs.TestLeaseRecoveryStriped$BlockLengths@96897c8[blockLengths={4194304,1048576,4194304,3145728,3145728,4194304,2097152,2097152,4194304},safeLength=18874368]
-java.io.IOException: Could not get block locations. Source file &quot;/TestLeaseRecoveryStriped/testfile&quot; - Aborting...#2: failed, block==null
-	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1508)
-	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeOrExternalError(DataStreamer.java:1287)
-	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:668)
-	at org.apache.hadoop.hdfs.StripedDataStreamer.run(StripedDataStreamer.java:46)
+failed testCase at i=0, blockLengths=org.apache.hadoop.hdfs.TestLeaseRecoveryStriped$BlockLengths@798deee8[blockLengths={3145728,2097152,4194304,3145728,4194304,1048576,2097152,1048576,1048576},safeLength=12582912]
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:367)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:398)
+	at org.apache.hadoop.net.SocketInputStream$Reader.performIO(SocketInputStream.java:57)
+	at org.apache.hadoop.net.SocketIOWithTimeout.doIO(SocketIOWithTimeout.java:142)
+	at org.apache.hadoop.net.SocketInputStream.read(SocketInputStream.java:161)
+	at org.apache.hadoop.net.SocketInputStream.read(SocketInputStream.java:131)
+	at org.apache.hadoop.net.SocketInputStream.read(SocketInputStream.java:118)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:82)
+	at org.apache.hadoop.hdfs.protocolPB.PBHelperClient.vintPrefixed(PBHelperClient.java:519)
+	at org.apache.hadoop.hdfs.client.impl.BlockReaderRemote.newBlockReader(BlockReaderRemote.java:414)
+	at org.apache.hadoop.hdfs.client.impl.BlockReaderFactory.getRemoteBlockReader(BlockReaderFactory.java:858)
+	at org.apache.hadoop.hdfs.client.impl.BlockReaderFactory.getRemoteBlockReaderFromTcp(BlockReaderFactory.java:754)
+	at org.apache.hadoop.hdfs.client.impl.BlockReaderFactory.build(BlockReaderFactory.java:381)
+	at org.apache.hadoop.hdfs.client.impl.BlockReaderTestUtil.getBlockReader(BlockReaderTestUtil.java:228)
+	at org.apache.hadoop.hdfs.StripedFileTestUtil.checkData(StripedFileTestUtil.java:439)
+	at org.apache.hadoop.hdfs.TestLeaseRecoveryStriped.runTest(TestLeaseRecoveryStriped.java:202)
+	at org.apache.hadoop.hdfs.TestLeaseRecoveryStriped.testLeaseRecovery(TestLeaseRecoveryStriped.java:183)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
 
 	at org.junit.Assert.fail(Assert.java:89)
 	at org.apache.hadoop.hdfs.TestLeaseRecoveryStriped.testLeaseRecovery(TestLeaseRecoveryStriped.java:188)
@@ -3321,6 +3224,43 @@ java.io.IOException: Could not get block locations. Source file &quot;/TestLease
 	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
 	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
 	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+</failure>
+
+<failure message="One of the tests failed. See the Detailed results to identify the command that failed" type="java.lang.AssertionError">java.lang.AssertionError: One of the tests failed. See the Detailed results to identify the command that failed
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.apache.hadoop.cli.CLITestHelper.displayResults(CLITestHelper.java:264)
+	at org.apache.hadoop.cli.CLITestHelper.tearDown(CLITestHelper.java:126)
+	at org.apache.hadoop.cli.TestAclCLI.tearDown(TestAclCLI.java:55)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.RunAfters.invokeMethod(RunAfters.java:46)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)
 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
 	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
@@ -3387,7 +3327,7 @@ java.io.IOException: Could not get block locations. Source file &quot;/TestLease
 	at org.junit.Assert.fail(Assert.java:87)
 	at org.junit.Assert.assertTrue(Assert.java:42)
 	at org.junit.Assert.assertTrue(Assert.java:53)
-	at org.apache.hadoop.hdfs.server.blockmanagement.TestBlockTokenWithDFS.doTestRead(TestBlockTokenWithDFS.java:396)
+	at org.apache.hadoop.hdfs.server.blockmanagement.TestBlockTokenWithDFS.doTestRead(TestBlockTokenWithDFS.java:390)
 	at org.apache.hadoop.hdfs.server.blockmanagement.TestBlockTokenWithDFSStriped.testRead(TestBlockTokenWithDFSStriped.java:92)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
@@ -3521,49 +3461,4 @@ java.io.IOException: Could not get block locations. Source file &quot;/TestLease
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
 </failure>
-
-<failure message="The text read does not match the text written expected:&lt;The blue zone is for loading and unloading only. Please park in the red zone.&gt; but was:&lt;null&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: The text read does not match the text written expected:<The blue zone is for loading and unloading only. Please park in the red zone.> but was:<null>
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.failNotEquals(Assert.java:835)
-	at org.junit.Assert.assertEquals(Assert.java:120)
-	at org.apache.hadoop.hdfs.TestAclsEndToEnd$4.execute(TestAclsEndToEnd.java:1599)
-	at org.apache.hadoop.hdfs.TestAclsEndToEnd$6.run(TestAclsEndToEnd.java:1640)
-	at org.apache.hadoop.hdfs.TestAclsEndToEnd$6.run(TestAclsEndToEnd.java:1636)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:391)
-	at java.base/javax.security.auth.Subject.doAs(Subject.java:363)
-	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1855)
-	at org.apache.hadoop.hdfs.TestAclsEndToEnd.doUserOp(TestAclsEndToEnd.java:1636)
-	at org.apache.hadoop.hdfs.TestAclsEndToEnd.compareFile(TestAclsEndToEnd.java:1593)
-	at org.apache.hadoop.hdfs.TestAclsEndToEnd.doFullAclTest(TestAclsEndToEnd.java:454)
-	at org.apache.hadoop.hdfs.TestAclsEndToEnd.testGoodWithKeyAclsWithoutBlacklist(TestAclsEndToEnd.java:394)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
-]]></failure>
 

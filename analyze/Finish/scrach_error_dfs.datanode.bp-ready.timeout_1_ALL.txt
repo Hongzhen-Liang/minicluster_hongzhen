@@ -9,7 +9,6 @@ testRedirectConnectTimeout[timeoutSource=Configuration]
 testTwoStepWriteConnectTimeout[timeoutSource=Configuration]
 testNativeCodeLoaded
 testAddRplicaProcessorForAddingReplicaInMap
-testDecommissionWithMissingBlock
 testThrottling
 testHANameNodesWithFederation
 testGetHaNnHttpAddresses

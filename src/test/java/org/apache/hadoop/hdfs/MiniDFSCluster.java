@@ -936,6 +936,7 @@ public class MiniDFSCluster implements AutoCloseable {
     ArrayList<DataNode> dns = getDataNodes();
     for (DataNode dn:dns) {
       dn.reconfigurePropertyImpl(property,newVal);
+
     }
 //    Log mylog = LogFactory.getLog("MyLog");
 //    mylog.error("reconfig "+property+","+newVal);
@@ -965,6 +966,7 @@ public class MiniDFSCluster implements AutoCloseable {
       boolean skipFsyncForTesting,
       boolean useConfiguredTopologyMappingClass)
   throws IOException {
+
     boolean success = false;
     try {
       ExitUtil.disableSystemExit();
@@ -2192,7 +2194,9 @@ public class MiniDFSCluster implements AutoCloseable {
    */
   public void shutdown(boolean deleteDfsDir, boolean closeFileSystem) {
     //Author Hongzhen
-    outerDataNodeServer.interrupt();
+    //outerDataNodeServer.interrupt();
+    BroadCastClientServer.stop();
+
     LOG.info("Shutting down the Mini HDFS Cluster");
     if (checkExitOnShutdown)  {
       if (ExitUtil.terminateCalled()) {

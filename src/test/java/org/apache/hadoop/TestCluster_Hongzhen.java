@@ -15,7 +15,7 @@ import java.lang.management.ManagementFactory;
 import java.util.concurrent.TimeUnit;
 
 public class TestCluster_Hongzhen{
-//    @Test
+    //@Test
     public void testCluster() throws Exception {
         Log mylog = LogFactory.getLog("MyLog");
         Configuration conf = new HdfsConfiguration();
@@ -25,10 +25,10 @@ public class TestCluster_Hongzhen{
         DataNode dn = cluster.getDataNodes().get(0);
         FileSystem fs = cluster.getFileSystem();
         mylog.error("start sleep");
-        while(true){
-            //mylog.error("EncryptDataTransfer="+dn.getDnConf().getEncryptDataTransfer());
-            TimeUnit.SECONDS.sleep(10);
-        }
+//        while(true){
+//            //mylog.error("EncryptDataTransfer="+dn.getDnConf().getEncryptDataTransfer());
+//            TimeUnit.SECONDS.sleep(10);
+//        }
 
 //        fs.close();
 //        cluster.shutdown();
