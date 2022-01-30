@@ -1,0 +1,1 @@
+dfs.block.access.token.enable,true:dfs.encrypt.data.transfer,true ALL

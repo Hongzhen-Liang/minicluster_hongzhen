@@ -20,7 +20,7 @@ public class BroadCastClient {
 				String line = is.readLine();
 				System.out.println(line);
 				//pw.printf("dfs.encrypt.data.transfer,true");
-				pw.printf(args[0]+","+args[1]);
+				pw.printf(args[0]);
 				pw.flush();
 
 				pw.close();

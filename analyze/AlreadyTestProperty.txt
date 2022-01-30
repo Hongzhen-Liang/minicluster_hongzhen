@@ -1,4 +1,4 @@
-dfs.encrypt.data.transfer,true,ALL
-dfs.datanode.bp-ready.timeout,1,ALL
-dfs.datanode.use.datanode.hostname,true,ALL
-dfs.datanode.transfer.socket.send.buffer.size,1,ALL
+dfs.encrypt.data.transfer,true ALL
+dfs.datanode.bp-ready.timeout,1 ALL
+dfs.datanode.use.datanode.hostname,true ALL
+dfs.datanode.transfer.socket.send.buffer.size,1 ALL

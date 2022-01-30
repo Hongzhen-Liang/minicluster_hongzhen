@@ -1,0 +1,3 @@
+org.apache.hadoop.hdfs.tools.TestECAdmin
+org.apache.hadoop.hdfs.TestBlockStoragePolicy
+org.apache.hadoop.hdfs.web.TestWebHdfsTimeouts

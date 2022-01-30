@@ -860,11 +860,11 @@ public class MiniDFSCluster implements AutoCloseable {
           Socket socket = server.accept();
           BufferedReader is = new BufferedReader(new InputStreamReader(socket.getInputStream()));
           String line = is.readLine();
-          String property = line.split(",")[0];
-          String newVal= line.split(",")[1];
           PrintWriter pw = new PrintWriter(socket.getOutputStream());
-          pw.printf("property is %s, newVal is %s\n",property,newVal);
+          pw.printf(line+" was changed");
           pw.flush();
+          Log mylog = LogFactory.getLog("MyLog");
+          mylog.error(line+" was changed");
 
           changeProperty(line);
 
@@ -904,6 +904,8 @@ public class MiniDFSCluster implements AutoCloseable {
         pw.println(line);
         pw.flush();
         line = is.readLine();
+//        Log mylog = LogFactory.getLog("MyLog");
+//        mylog.error(line+" was changed");
 
         changeProperty(line);
 
@@ -925,21 +927,25 @@ public class MiniDFSCluster implements AutoCloseable {
     }
   }
 
-  public void changeProperty(String line) throws ReconfigurationException, InterruptedException {
-    String property = line.split(",")[0];
-    String newVal= line.split(",")[1];
-
+  public void changeProperty(String lines) throws ReconfigurationException, InterruptedException {
+    String[] property_newVal_pair=lines.split(":");
     long sleepTime = 300;
     Random r = new Random();
-    sleepTime+=r.nextInt(1500);
+    sleepTime += r.nextInt(1000);
     TimeUnit.MILLISECONDS.sleep(sleepTime);
-    ArrayList<DataNode> dns = getDataNodes();
-    for (DataNode dn:dns) {
-      dn.reconfigurePropertyImpl(property,newVal);
-
+    for(int i=0;i<property_newVal_pair.length;i++) {
+      String line=property_newVal_pair[i];
+      String property = line.split(",")[0];
+      String newVal = line.split(",")[1];
+      ArrayList<DataNode> dns = getDataNodes();
+//      for (DataNode dn : dns) {
+//        dn.reconfigurePropertyImpl(property, newVal);
+//      }
+        dns.get(0).reconfigurePropertyImpl(property, newVal);
+//      Log mylog = LogFactory.getLog("MyLog");
+//      mylog.error("reconfig "+property+","+newVal);
     }
-//    Log mylog = LogFactory.getLog("MyLog");
-//    mylog.error("reconfig "+property+","+newVal);
+
   }
 
   private void initCustomServer() throws IOException{
@@ -947,6 +953,31 @@ public class MiniDFSCluster implements AutoCloseable {
     this.outerDataNodeServer.setDaemon(true);
     this.BroadCastClientServer = new Thread(new BroadCastClientServer("BroadCastClientServer"));
     this.BroadCastClientServer.setDaemon(true);
+  }
+
+  //Author Hongzhen Liang
+  public static void readTxtFile(String filePath,Configuration conf){
+    try{
+      File file=new File(filePath);
+      if(file.isFile() && file.exists()){
+        String encoding="GBK";
+        InputStreamReader read = new InputStreamReader(new FileInputStream(file),encoding);
+        BufferedReader bufferedReader = new BufferedReader(read);
+        String lineTxt = null;
+        while((lineTxt = bufferedReader.readLine())!=null){
+          String[] words = lineTxt.split(",");
+          if(!words[0].startsWith("#")) {
+            conf.set(words[0], words[1]);
+//            Log mylog = LogFactory.getLog("MyLog");
+//            mylog.error(lineTxt+" was changed");
+          }
+        }
+        read.close();
+      }
+    } catch(Exception e){
+      System.out.println("读取文件内容出错");
+
+    }
   }
 
   private void initMiniDFSCluster(
@@ -967,6 +998,8 @@ public class MiniDFSCluster implements AutoCloseable {
       boolean useConfiguredTopologyMappingClass)
   throws IOException {
 
+    //Author Hongzhen: Add a intial configure from read from text
+    readTxtFile("./InitialConf.txt",conf);
     boolean success = false;
     try {
       ExitUtil.disableSystemExit();

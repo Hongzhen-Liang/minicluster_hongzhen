@@ -6,6 +6,6 @@ sed -i 's/\r//' analyze/AlreadyTestProperty.txt
 
 cat analyze/ToTestProperty.txt | while read line
 do
-	array=(${line//,/ })
-	./combination.sh ${array[0]} ${array[1]} ${array[2]}
+	array=(${line// / })
+	./combination.sh ${array[0]} ${array[1]}
 done

@@ -11,13 +11,12 @@ else
  rm -r target/surefire-reports
 fi
 
-# "./combination.sh dfs.encrypt.data.transfer true ALL"
-property=$1
-newValue=$2
-DTest=$3
+# "./combination.sh dfs.block.access.token.enable,true:dfs.encrypt.data.transfer,true ALL"
+property_newValue=$1
+DTest=$2
 
 javac BroadCastClient.java
-nohup java BroadCastClient $property $newValue &
+nohup java BroadCastClient $property_newValue &
 
 if [ "$DTest" == "ALL" ]||[ -z "$DTest" ];then
 	mvn test
@@ -28,4 +27,4 @@ fi
 pid=$(jps | grep BroadCastClient | awk '{print $1}')
 kill -9 $pid
 
-python3 analyze/Error_Analyze.py $property $newValue $DTest
+python3 analyze/Error_Analyze.py $property_newValue $DTest
