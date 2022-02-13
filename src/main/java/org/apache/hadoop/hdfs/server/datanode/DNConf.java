@@ -352,14 +352,14 @@ public class DNConf {
    * 
    * @return boolean true if connect to datanode via hostname
    */
-  int getConnectToDnViaHostnameTimes=0;
+//  int getConnectToDnViaHostnameTimes=0;
   public boolean getConnectToDnViaHostname() {
-    getConnectToDnViaHostnameTimes++;
-    if(getConnectToDnViaHostnameTimes>1) {
-      mylog.error("The first time calls getConnectToDnViaHostname "+ getConnectToDnViaHostnameTimes+" value: " + connectToDnViaHostname);
-    }else{
-      mylog.error("getConnectToDnViaHostname:"  + connectToDnViaHostname);
-    }
+//    getConnectToDnViaHostnameTimes++;
+//    if(getConnectToDnViaHostnameTimes>1) {
+//      mylog.error("The first time calls getConnectToDnViaHostname "+ getConnectToDnViaHostnameTimes+" value: " + connectToDnViaHostname);
+//    }else{
+//      mylog.error("getConnectToDnViaHostname:"  + connectToDnViaHostname);
+//    }
     return connectToDnViaHostname;
   }
 
@@ -420,7 +420,14 @@ public class DNConf {
     return transferSocketRecvBufferSize;
   }
 
+  int getTransferSocketSendBufferSizeTimes=0;
   public int getTransferSocketSendBufferSize() {
+    getTransferSocketSendBufferSizeTimes++;
+    if(getTransferSocketSendBufferSizeTimes>1) {
+      mylog.error("getTransferSocketSendBufferSize "+ getTransferSocketSendBufferSizeTimes+" value: " + transferSocketSendBufferSize);
+    }else{
+      mylog.error("The first time calls  getTransferSocketSendBufferSize:"  + transferSocketSendBufferSize);
+    }
     return transferSocketSendBufferSize;
   }
 
