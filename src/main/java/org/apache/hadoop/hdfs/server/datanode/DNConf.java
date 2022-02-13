@@ -17,6 +17,8 @@
  */
 package org.apache.hadoop.hdfs.server.datanode;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.apache.hadoop.classification.InterfaceAudience;
 
 import static org.apache.hadoop.hdfs.DFSConfigKeys.DFS_BLOCKREPORT_INITIAL_DELAY_DEFAULT;
@@ -350,7 +352,14 @@ public class DNConf {
    * 
    * @return boolean true if connect to datanode via hostname
    */
+  int getConnectToDnViaHostnameTimes=0;
   public boolean getConnectToDnViaHostname() {
+    getConnectToDnViaHostnameTimes++;
+    if(getConnectToDnViaHostnameTimes>1) {
+      mylog.error("The first time calls getConnectToDnViaHostname "+ getConnectToDnViaHostnameTimes+" value: " + connectToDnViaHostname);
+    }else{
+      mylog.error("getConnectToDnViaHostname:"  + connectToDnViaHostname);
+    }
     return connectToDnViaHostname;
   }
 
@@ -419,7 +428,15 @@ public class DNConf {
     return tcpNoDelay;
   }
 
+  Log mylog = LogFactory.getLog("MyLog");
+//  int getBpReadyTimeoutTimes=0;
   public long getBpReadyTimeout() {
+//    getBpReadyTimeoutTimes++;
+//    if(getBpReadyTimeoutTimes>1) {
+//      mylog.error("getBpReadyTimeout called again,times "+ getBpReadyTimeoutTimes+" value: " + bpReadyTimeout);
+//    }else{
+//      mylog.error("getBpReadyTimeout called:"  + bpReadyTimeout);
+//    }
     return bpReadyTimeout;
   }
 

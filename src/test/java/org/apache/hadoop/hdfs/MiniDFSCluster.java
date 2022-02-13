@@ -79,8 +79,7 @@ import org.apache.hadoop.hdfs.server.datanode.VolumeScanner;
 import org.apache.hadoop.hdfs.server.namenode.ImageServlet;
 import org.apache.hadoop.http.HttpConfig;
 import org.apache.hadoop.security.ssl.KeyStoreTestUtil;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+
 import org.apache.hadoop.classification.InterfaceAudience;
 import org.apache.hadoop.classification.InterfaceStability;
 import org.apache.hadoop.conf.Configuration;
@@ -142,6 +141,9 @@ import org.apache.hadoop.thirdparty.com.google.common.base.Joiner;
 import org.apache.hadoop.thirdparty.com.google.common.base.Preconditions;
 import org.apache.hadoop.thirdparty.com.google.common.collect.Lists;
 import org.apache.hadoop.thirdparty.com.google.common.collect.Sets;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 
 /**
  * This class creates a single-process DFS cluster for junit testing.
@@ -904,8 +906,8 @@ public class MiniDFSCluster implements AutoCloseable {
         pw.println(line);
         pw.flush();
         line = is.readLine();
-//        Log mylog = LogFactory.getLog("MyLog");
-//        mylog.error(line+" was changed");
+        //Log mylog = LogFactory.getLog("MyLog");
+        //mylog.error(line+" was changed");
 
         changeProperty(line);
 
@@ -929,9 +931,9 @@ public class MiniDFSCluster implements AutoCloseable {
 
   public void changeProperty(String lines) throws ReconfigurationException, InterruptedException {
     String[] property_newVal_pair=lines.split(":");
-    long sleepTime = 300;
+    long sleepTime = 100;
     Random r = new Random();
-    sleepTime += r.nextInt(1000);
+    sleepTime += r.nextInt(500);
     TimeUnit.MILLISECONDS.sleep(sleepTime);
     for(int i=0;i<property_newVal_pair.length;i++) {
       String line=property_newVal_pair[i];

@@ -142,7 +142,9 @@ class DataXceiver extends Receiver implements Runnable {
     this.socketOut = peer.getOutputStream();
     this.datanode = datanode;
     this.dataXceiverServer = dataXceiverServer;
-    this.connectToDnViaHostname = datanode.getDnConf().connectToDnViaHostname;
+    //Author: Hongzhen Liang
+//    this.connectToDnViaHostname = datanode.getDnConf().connectToDnViaHostname;
+    this.connectToDnViaHostname = datanode.getDnConf().getConnectToDnViaHostname();
     this.ioFileBufferSize = DFSUtilClient.getIoFileBufferSize(datanode.getConf());
     this.smallBufferSize = DFSUtilClient.getSmallBufferSize(datanode.getConf());
     remoteAddress = peer.getRemoteAddressString();

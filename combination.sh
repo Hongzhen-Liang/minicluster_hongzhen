@@ -27,4 +27,4 @@ fi
 pid=$(jps | grep BroadCastClient | awk '{print $1}')
 kill -9 $pid
 
-python3 analyze/Error_Analyze.py $property_newValue $DTest
+#python3 analyze/Error_Analyze.py $property_newValue $DTest

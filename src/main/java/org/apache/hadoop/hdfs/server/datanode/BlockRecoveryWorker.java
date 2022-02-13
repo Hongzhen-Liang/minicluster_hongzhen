@@ -129,9 +129,13 @@ public class BlockRecoveryWorker {
       for(DatanodeID id : locs) {
         try {
           DatanodeID bpReg = getDatanodeID(bpid);
+          //Author: Hongzhen Liang
+//          InterDatanodeProtocol proxyDN = bpReg.equals(id)?
+//              datanode: DataNode.createInterDataNodeProtocolProxy(id, conf,
+//              dnConf.socketTimeout, dnConf.connectToDnViaHostname);
           InterDatanodeProtocol proxyDN = bpReg.equals(id)?
-              datanode: DataNode.createInterDataNodeProtocolProxy(id, conf,
-              dnConf.socketTimeout, dnConf.connectToDnViaHostname);
+                  datanode: DataNode.createInterDataNodeProtocolProxy(id, conf,
+                  dnConf.socketTimeout, dnConf.getConnectToDnViaHostname());
           ReplicaRecoveryInfo info = callInitReplicaRecovery(proxyDN, rBlock);
           if (info != null &&
               info.getGenerationStamp() >= block.getGenerationStamp() &&
@@ -408,9 +412,15 @@ public class BlockRecoveryWorker {
         DatanodeID id = locs[i];
         try {
           DatanodeID bpReg = getDatanodeID(bpid);
+          //Author: Hongzhen Liang
+//          InterDatanodeProtocol proxyDN = bpReg.equals(id) ?
+//              datanode : DataNode.createInterDataNodeProtocolProxy(id, conf,
+//              dnConf.socketTimeout, dnConf.connectToDnViaHostname);
           InterDatanodeProtocol proxyDN = bpReg.equals(id) ?
-              datanode : DataNode.createInterDataNodeProtocolProxy(id, conf,
-              dnConf.socketTimeout, dnConf.connectToDnViaHostname);
+                  datanode : DataNode.createInterDataNodeProtocolProxy(id, conf,
+                  dnConf.socketTimeout, dnConf.getConnectToDnViaHostname());
+
+
           ExtendedBlock internalBlk = new ExtendedBlock(block);
           final long blockId = block.getBlockId() + blockIndices[i];
           internalBlk.setBlockId(blockId);
