@@ -112,7 +112,7 @@ public class DNConf {
   final long ibrInterval;
   final long initialBlockReportDelayMs;
   final long cacheReportInterval;
-  final long datanodeSlowIoWarningThresholdMs;
+   long datanodeSlowIoWarningThresholdMs;
 
   final String minimumNameNodeVersion;
   String encryptionAlgorithm;
@@ -469,8 +469,9 @@ public class DNConf {
   public int getVolsConfigured() {
     return volsConfigured;
   }
-
+  int getSlowIoWarningThresholdMsTimes=0;
   public long getSlowIoWarningThresholdMs() {
+    printMylog(++getSlowIoWarningThresholdMsTimes,"getSlowIoWarningThresholdMs",datanodeSlowIoWarningThresholdMs+"");
     return datanodeSlowIoWarningThresholdMs;
   }
 
@@ -486,9 +487,9 @@ public class DNConf {
     return pmemCacheRecoveryEnabled;
   }
 
-  int getProcessCommandsThresholdMsTimes=0;
+//  int getProcessCommandsThresholdMsTimes=0;
   public long getProcessCommandsThresholdMs() {
-    printMylog(++getProcessCommandsThresholdMsTimes,"getProcessCommandsThresholdMs",processCommandsThresholdMs+"");
+//    printMylog(++getProcessCommandsThresholdMsTimes,"getProcessCommandsThresholdMs",processCommandsThresholdMs+"");
     return processCommandsThresholdMs;
   }
 

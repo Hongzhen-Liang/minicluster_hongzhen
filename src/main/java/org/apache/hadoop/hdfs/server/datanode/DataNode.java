@@ -291,7 +291,8 @@ public class DataNode extends ReconfigurableBase
               DFS_DATANODE_TRANSFER_SOCKET_SEND_BUFFER_SIZE_KEY,
                   DFS_DATANODE_FAILED_VOLUMES_TOLERATED_KEY,
                   DFS_DATANODE_TRANSFER_SOCKET_RECV_BUFFER_SIZE_KEY,
-                  DFS_DATANODE_PROCESS_COMMANDS_THRESHOLD_KEY));
+                  DFS_DATANODE_PROCESS_COMMANDS_THRESHOLD_KEY,
+                  DFS_DATANODE_SLOW_IO_WARNING_THRESHOLD_KEY));
 
   public static final Log METRICS_LOG = LogFactory.getLog("DataNodeMetricsLog");
 
@@ -713,6 +714,18 @@ public class DataNode extends ReconfigurableBase
         }
         getConf().setTimeDuration(DFS_DATANODE_PROCESS_COMMANDS_THRESHOLD_KEY,processCommandsThresholdMs,TimeUnit.MILLISECONDS);
         this.getDnConf().processCommandsThresholdMs = processCommandsThresholdMs;
+        return newVal;
+      }
+      case DFS_DATANODE_SLOW_IO_WARNING_THRESHOLD_KEY:{
+        LOG.info("Reconfiguring {} to {}", property, newVal);
+        long datanodeSlowIoWarningThresholdMs;
+        if(newVal == null){
+          datanodeSlowIoWarningThresholdMs = DFS_DATANODE_SLOW_IO_WARNING_THRESHOLD_DEFAULT;
+        }else{
+          datanodeSlowIoWarningThresholdMs = Long.valueOf(newVal);
+        }
+        getConf().set(DFS_DATANODE_SLOW_IO_WARNING_THRESHOLD_KEY,newVal);
+        this.getDnConf().datanodeSlowIoWarningThresholdMs = datanodeSlowIoWarningThresholdMs;
         return newVal;
       }
       default:
