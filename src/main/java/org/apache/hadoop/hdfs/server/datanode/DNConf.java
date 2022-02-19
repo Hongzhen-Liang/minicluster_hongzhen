@@ -87,7 +87,7 @@ public class DNConf {
   final int socketWriteTimeout;
   final int socketKeepaliveTimeout;
   public int transferSocketSendBufferSize;
-  private final int transferSocketRecvBufferSize;
+  public int transferSocketRecvBufferSize;
   private final boolean tcpNoDelay;
 
   final boolean transferToAllowed;
@@ -416,7 +416,10 @@ public class DNConf {
     return allowNonLocalLazyPersist;
   }
 
+  int getTransferSocketRecvBufferSizeTimes=0;
   public int getTransferSocketRecvBufferSize() {
+    getTransferSocketRecvBufferSizeTimes++;
+    printMylog(getTransferSocketRecvBufferSizeTimes,"getTransferSocketRecvBufferSize",transferSocketRecvBufferSize+"");
     return transferSocketRecvBufferSize;
   }
 
@@ -456,10 +459,10 @@ public class DNConf {
     return lifelineIntervalMs;
   }
 
-  int getVolFailuresToleratedTimes=0;
+//  int getVolFailuresToleratedTimes=0;
   public int getVolFailuresTolerated() {
-    getVolFailuresToleratedTimes++;
-    printMylog(getVolFailuresToleratedTimes,"getVolFailuresTolerated",volFailuresTolerated+"");
+//    getVolFailuresToleratedTimes++;
+//    printMylog(getVolFailuresToleratedTimes,"getVolFailuresTolerated",volFailuresTolerated+"");
     return volFailuresTolerated;
   }
 
