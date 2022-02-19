@@ -133,7 +133,7 @@ public class DNConf {
   // Allow LAZY_PERSIST writes from non-local clients?
   private final boolean allowNonLocalLazyPersist;
 
-  private final int volFailuresTolerated;
+  public  int volFailuresTolerated;
   private final int volsConfigured;
   private final int maxDataLength;
   private Configurable dn;
@@ -420,14 +420,14 @@ public class DNConf {
     return transferSocketRecvBufferSize;
   }
 
-  int getTransferSocketSendBufferSizeTimes=0;
+//  int getTransferSocketSendBufferSizeTimes=0;
   public int getTransferSocketSendBufferSize() {
-    getTransferSocketSendBufferSizeTimes++;
-    if(getTransferSocketSendBufferSizeTimes>1) {
-      mylog.error("getTransferSocketSendBufferSize "+ getTransferSocketSendBufferSizeTimes+" value: " + transferSocketSendBufferSize);
-    }else{
-      mylog.error("The first time calls  getTransferSocketSendBufferSize:"  + transferSocketSendBufferSize);
-    }
+//    getTransferSocketSendBufferSizeTimes++;
+//    if(getTransferSocketSendBufferSizeTimes>1) {
+//      mylog.error("getTransferSocketSendBufferSize "+ getTransferSocketSendBufferSizeTimes+" value: " + transferSocketSendBufferSize);
+//    }else{
+//      mylog.error("The first time calls  getTransferSocketSendBufferSize:"  + transferSocketSendBufferSize);
+//    }
     return transferSocketSendBufferSize;
   }
 
@@ -435,7 +435,7 @@ public class DNConf {
     return tcpNoDelay;
   }
 
-  Log mylog = LogFactory.getLog("MyLog");
+
 //  int getBpReadyTimeoutTimes=0;
   public long getBpReadyTimeout() {
 //    getBpReadyTimeoutTimes++;
@@ -456,7 +456,10 @@ public class DNConf {
     return lifelineIntervalMs;
   }
 
+  int getVolFailuresToleratedTimes=0;
   public int getVolFailuresTolerated() {
+    getVolFailuresToleratedTimes++;
+    printMylog(getVolFailuresToleratedTimes,"getVolFailuresTolerated",volFailuresTolerated+"");
     return volFailuresTolerated;
   }
 
@@ -482,5 +485,14 @@ public class DNConf {
 
   public long getProcessCommandsThresholdMs() {
     return processCommandsThresholdMs;
+  }
+
+  public void printMylog(int counter,String functionName, String value){
+    Log mylog = LogFactory.getLog("MyLog");
+    if(counter>1) {
+      mylog.error(functionName+" called again,times "+ counter+" value: " + value);
+    }else{
+      mylog.error("getBpReadyTimeout called:"  + value);
+    }
   }
 }

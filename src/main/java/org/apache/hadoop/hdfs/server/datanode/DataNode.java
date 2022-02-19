@@ -288,7 +288,8 @@ public class DataNode extends ReconfigurableBase
               DFS_DATA_ENCRYPTION_ALGORITHM_KEY,
               DFS_DATANODE_BP_READY_TIMEOUT_KEY,
               DFS_DATANODE_USE_DN_HOSTNAME,
-              DFS_DATANODE_TRANSFER_SOCKET_SEND_BUFFER_SIZE_KEY));
+              DFS_DATANODE_TRANSFER_SOCKET_SEND_BUFFER_SIZE_KEY,
+                  DFS_DATANODE_FAILED_VOLUMES_TOLERATED_KEY));
 
   public static final Log METRICS_LOG = LogFactory.getLog("DataNodeMetricsLog");
 
@@ -675,6 +676,18 @@ public class DataNode extends ReconfigurableBase
         getConf().set(DFS_DATANODE_TRANSFER_SOCKET_SEND_BUFFER_SIZE_KEY,Integer.toString(transferSocketSendBufferSize));
         this.getDnConf().transferSocketSendBufferSize = transferSocketSendBufferSize;
         return Integer.toString(transferSocketSendBufferSize);
+      }
+      case DFS_DATANODE_FAILED_VOLUMES_TOLERATED_KEY:{
+        LOG.info("Reconfiguring {} to {}", property, newVal);
+        int volFailuresTolerated;
+        if(newVal == null){
+          volFailuresTolerated = DFS_DATANODE_FAILED_VOLUMES_TOLERATED_DEFAULT;
+        }else{
+          volFailuresTolerated = Integer.parseInt(newVal);
+        }
+        getConf().set(DFS_DATANODE_FAILED_VOLUMES_TOLERATED_KEY,newVal);
+        this.getDnConf().volFailuresTolerated = volFailuresTolerated;
+        return Integer.toString(volFailuresTolerated);
       }
       default:
         break;

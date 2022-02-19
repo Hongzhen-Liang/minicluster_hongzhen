@@ -11,6 +11,10 @@ else
  rm -r target/surefire-reports
 fi
 
+if [[ -d "$target/log/HongzhenDebug.log" ]]; then
+ rm -r target/log/HongzhenDebug.log
+fi
+
 # "./combination.sh dfs.block.access.token.enable,true:dfs.encrypt.data.transfer,true ALL"
 property_newValue=$1
 DTest=$2
@@ -27,4 +31,4 @@ fi
 pid=$(jps | grep BroadCastClient | awk '{print $1}')
 kill -9 $pid
 
-#python3 analyze/Error_Analyze.py $property_newValue $DTest
+python3 analyze/Error_Analyze.py $property_newValue $DTest

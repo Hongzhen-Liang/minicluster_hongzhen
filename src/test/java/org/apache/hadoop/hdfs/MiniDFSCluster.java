@@ -944,6 +944,7 @@ public class MiniDFSCluster implements AutoCloseable {
 //        dn.reconfigurePropertyImpl(property, newVal);
 //      }
         dns.get(0).reconfigurePropertyImpl(property, newVal);
+//      dns.get(0).getDnConf().set(property,newVal);
 //      Log mylog = LogFactory.getLog("MyLog");
 //      mylog.error("reconfig "+property+","+newVal);
     }
