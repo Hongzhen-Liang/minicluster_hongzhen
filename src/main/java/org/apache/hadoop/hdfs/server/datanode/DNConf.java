@@ -123,7 +123,7 @@ public class DNConf {
   final long xceiverStopTimeout;
   final long restartReplicaExpiry;
 
-  private final long processCommandsThresholdMs;
+  public  long processCommandsThresholdMs;
 
   final long maxLockedMemory;
   private final String[] pmemDirs;
@@ -416,10 +416,10 @@ public class DNConf {
     return allowNonLocalLazyPersist;
   }
 
-  int getTransferSocketRecvBufferSizeTimes=0;
+//  int getTransferSocketRecvBufferSizeTimes=0;
   public int getTransferSocketRecvBufferSize() {
-    getTransferSocketRecvBufferSizeTimes++;
-    printMylog(getTransferSocketRecvBufferSizeTimes,"getTransferSocketRecvBufferSize",transferSocketRecvBufferSize+"");
+//    getTransferSocketRecvBufferSizeTimes++;
+//    printMylog(getTransferSocketRecvBufferSizeTimes,"getTransferSocketRecvBufferSize",transferSocketRecvBufferSize+"");
     return transferSocketRecvBufferSize;
   }
 
@@ -486,7 +486,9 @@ public class DNConf {
     return pmemCacheRecoveryEnabled;
   }
 
+  int getProcessCommandsThresholdMsTimes=0;
   public long getProcessCommandsThresholdMs() {
+    printMylog(++getProcessCommandsThresholdMsTimes,"getProcessCommandsThresholdMs",processCommandsThresholdMs+"");
     return processCommandsThresholdMs;
   }
 
