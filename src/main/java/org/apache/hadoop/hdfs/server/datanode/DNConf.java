@@ -91,22 +91,22 @@ public class DNConf {
   private final boolean tcpNoDelay;
 
   final boolean transferToAllowed;
-  final boolean dropCacheBehindWrites;
-  final boolean syncBehindWrites;
-  final boolean syncBehindWritesInBackground;
-  final boolean dropCacheBehindReads;
+  boolean dropCacheBehindWrites;
+  boolean syncBehindWrites;
+  boolean syncBehindWritesInBackground;
+  boolean dropCacheBehindReads;
   final boolean syncOnClose;
   public boolean encryptDataTransfer;
   boolean connectToDnViaHostname;
   final boolean overwriteDownstreamDerivedQOP;
-  private final boolean pmemCacheRecoveryEnabled;
+  public boolean pmemCacheRecoveryEnabled;
 
   final long readaheadLength;
   public long heartBeatInterval;
   private final long lifelineIntervalMs;
   final long blockReportInterval;
   final long blockReportSplitThreshold;
-  final boolean peerStatsEnabled;
+  public boolean peerStatsEnabled;
   final boolean diskStatsEnabled;
   final long outliersReportIntervalMs;
   final long ibrInterval;
@@ -439,6 +439,7 @@ public class DNConf {
   }
 
 
+
 //  int getBpReadyTimeoutTimes=0;
   public long getBpReadyTimeout() {
 //    getBpReadyTimeoutTimes++;
@@ -469,9 +470,9 @@ public class DNConf {
   public int getVolsConfigured() {
     return volsConfigured;
   }
-  int getSlowIoWarningThresholdMsTimes=0;
+//  int getSlowIoWarningThresholdMsTimes=0;
   public long getSlowIoWarningThresholdMs() {
-    printMylog(++getSlowIoWarningThresholdMsTimes,"getSlowIoWarningThresholdMs",datanodeSlowIoWarningThresholdMs+"");
+//    printMylog(++getSlowIoWarningThresholdMsTimes,"getSlowIoWarningThresholdMs",datanodeSlowIoWarningThresholdMs+"");
     return datanodeSlowIoWarningThresholdMs;
   }
 
@@ -483,7 +484,9 @@ public class DNConf {
     return pmemDirs;
   }
 
+  int getPmemCacheRecoveryEnabledTimes=0;
   public boolean getPmemCacheRecoveryEnabled() {
+    printMylog(++getPmemCacheRecoveryEnabledTimes,"getPmemCacheRecoveryEnabled",pmemCacheRecoveryEnabled+"");
     return pmemCacheRecoveryEnabled;
   }
 
@@ -491,6 +494,34 @@ public class DNConf {
   public long getProcessCommandsThresholdMs() {
 //    printMylog(++getProcessCommandsThresholdMsTimes,"getProcessCommandsThresholdMs",processCommandsThresholdMs+"");
     return processCommandsThresholdMs;
+  }
+
+  int getDropCacheBehindWritesTimes=0;
+  public boolean getDropCacheBehindWrites(){
+    printMylog(++getDropCacheBehindWritesTimes,"getDropCacheBehindWrites",dropCacheBehindWrites+"");
+    return dropCacheBehindWrites;
+  }
+
+  int getSyncBehindWritesTimes=0;
+  public boolean getSyncBehindWrites(){
+    printMylog(++getSyncBehindWritesTimes,"getSyncBehindWrites",syncBehindWrites+"");
+    return syncBehindWrites;
+  }
+
+  int syncBehindWritesInBackgroundTimes=0;
+  public boolean getSyncBehindWritesInBackground(){
+    printMylog(++syncBehindWritesInBackgroundTimes,"getSyncBehindWritesInBackground",syncBehindWritesInBackground+"");
+    return syncBehindWritesInBackground;
+  }
+  int dropCacheBehindReadsTimes=0;
+  public boolean getDropCacheBehindReads(){
+    printMylog(++dropCacheBehindReadsTimes,"getDropCacheBehindReads",dropCacheBehindReads+"");
+    return dropCacheBehindReads;
+  }
+  int peerStatsEnabledTime=0;
+  public boolean getPeerStatsEnabled(){
+    printMylog(++peerStatsEnabledTime,"getPeerStatsEnabled",peerStatsEnabled+"");
+    return peerStatsEnabled;
   }
 
   public void printMylog(int counter,String functionName, String value){

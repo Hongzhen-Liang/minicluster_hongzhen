@@ -250,11 +250,11 @@ class BlockReceiver implements Closeable {
       }
       replicaInfo = replicaHandler.getReplica();
       this.dropCacheBehindWrites = (cachingStrategy.getDropBehind() == null) ?
-        datanode.getDnConf().dropCacheBehindWrites :
+        datanode.getDnConf().getDropCacheBehindWrites() :
           cachingStrategy.getDropBehind();
-      this.syncBehindWrites = datanode.getDnConf().syncBehindWrites;
+      this.syncBehindWrites = datanode.getDnConf().getSyncBehindWrites();
       this.syncBehindWritesInBackground = datanode.getDnConf().
-          syncBehindWritesInBackground;
+              getSyncBehindWritesInBackground();
       
       final boolean isCreate = isDatanode || isTransfer 
           || stage == BlockConstructionStage.PIPELINE_SETUP_CREATE;

@@ -222,7 +222,7 @@ class BlockSender implements java.io.Closeable {
       if (cachingStrategy.getDropBehind() == null) {
         this.dropCacheBehindAllReads = false;
         this.dropCacheBehindLargeReads =
-            datanode.getDnConf().dropCacheBehindReads;
+            datanode.getDnConf().getDropCacheBehindReads();
       } else {
         this.dropCacheBehindAllReads =
             this.dropCacheBehindLargeReads =

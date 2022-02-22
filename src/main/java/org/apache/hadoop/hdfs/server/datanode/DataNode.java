@@ -292,7 +292,13 @@ public class DataNode extends ReconfigurableBase
                   DFS_DATANODE_FAILED_VOLUMES_TOLERATED_KEY,
                   DFS_DATANODE_TRANSFER_SOCKET_RECV_BUFFER_SIZE_KEY,
                   DFS_DATANODE_PROCESS_COMMANDS_THRESHOLD_KEY,
-                  DFS_DATANODE_SLOW_IO_WARNING_THRESHOLD_KEY));
+                  DFS_DATANODE_SLOW_IO_WARNING_THRESHOLD_KEY,
+                  DFS_DATANODE_DROP_CACHE_BEHIND_WRITES_KEY,
+                  DFS_DATANODE_SYNC_BEHIND_WRITES_KEY,
+                  DFS_DATANODE_SYNC_BEHIND_WRITES_IN_BACKGROUND_KEY,
+                  DFS_DATANODE_DROP_CACHE_BEHIND_READS_KEY,
+                  DFS_DATANODE_PMEM_CACHE_RECOVERY_KEY,
+                  DFS_DATANODE_PEER_STATS_ENABLED_KEY));
 
   public static final Log METRICS_LOG = LogFactory.getLog("DataNodeMetricsLog");
 
@@ -726,6 +732,78 @@ public class DataNode extends ReconfigurableBase
         }
         getConf().set(DFS_DATANODE_SLOW_IO_WARNING_THRESHOLD_KEY,newVal);
         this.getDnConf().datanodeSlowIoWarningThresholdMs = datanodeSlowIoWarningThresholdMs;
+        return newVal;
+      }
+      case DFS_DATANODE_DROP_CACHE_BEHIND_WRITES_KEY:{
+        LOG.info("Reconfiguring {} to {}", property, newVal);
+        boolean dropCacheBehindWrites;
+        if(newVal == null){
+          dropCacheBehindWrites = DFS_DATANODE_DROP_CACHE_BEHIND_WRITES_DEFAULT;
+        }else{
+          dropCacheBehindWrites = Boolean.parseBoolean(newVal);
+        }
+        getConf().set(DFS_DATANODE_DROP_CACHE_BEHIND_WRITES_KEY,newVal);
+        this.getDnConf().dropCacheBehindWrites = dropCacheBehindWrites;
+        return newVal;
+      }
+      case DFS_DATANODE_SYNC_BEHIND_WRITES_KEY:{
+        LOG.info("Reconfiguring {} to {}", property, newVal);
+        boolean syncBehindWrites;
+        if(newVal == null){
+          syncBehindWrites = DFS_DATANODE_SYNC_BEHIND_WRITES_DEFAULT;
+        }else{
+          syncBehindWrites = Boolean.parseBoolean(newVal);
+        }
+        getConf().set(DFS_DATANODE_SYNC_BEHIND_WRITES_KEY,newVal);
+        this.getDnConf().syncBehindWrites = syncBehindWrites;
+        return newVal;
+      }
+      case DFS_DATANODE_SYNC_BEHIND_WRITES_IN_BACKGROUND_KEY:{
+        LOG.info("Reconfiguring {} to {}", property, newVal);
+        boolean syncBehindWritesInBackground;
+        if(newVal == null){
+          syncBehindWritesInBackground = DFS_DATANODE_SYNC_BEHIND_WRITES_IN_BACKGROUND_DEFAULT;
+        }else{
+          syncBehindWritesInBackground = Boolean.parseBoolean(newVal);
+        }
+        getConf().set(DFS_DATANODE_SYNC_BEHIND_WRITES_IN_BACKGROUND_KEY,newVal);
+        this.getDnConf().syncBehindWritesInBackground = syncBehindWritesInBackground;
+        return newVal;
+      }
+      case DFS_DATANODE_DROP_CACHE_BEHIND_READS_KEY:{
+        LOG.info("Reconfiguring {} to {}", property, newVal);
+        boolean dropCacheBehindReads;
+        if(newVal == null){
+          dropCacheBehindReads = DFS_DATANODE_DROP_CACHE_BEHIND_READS_DEFAULT;
+        }else{
+          dropCacheBehindReads = Boolean.parseBoolean(newVal);
+        }
+        getConf().set(DFS_DATANODE_DROP_CACHE_BEHIND_READS_KEY,newVal);
+        this.getDnConf().dropCacheBehindReads = dropCacheBehindReads;
+        return newVal;
+      }
+      case DFS_DATANODE_PMEM_CACHE_RECOVERY_KEY:{
+        LOG.info("Reconfiguring {} to {}", property, newVal);
+        boolean pmemCacheRecoveryEnabled;
+        if(newVal == null){
+          pmemCacheRecoveryEnabled = DFS_DATANODE_PMEM_CACHE_RECOVERY_DEFAULT;
+        }else{
+          pmemCacheRecoveryEnabled = Boolean.parseBoolean(newVal);
+        }
+        getConf().set(DFS_DATANODE_PMEM_CACHE_RECOVERY_KEY,newVal);
+        this.getDnConf().pmemCacheRecoveryEnabled = pmemCacheRecoveryEnabled;
+        return newVal;
+      }
+      case DFS_DATANODE_PEER_STATS_ENABLED_KEY:{
+        LOG.info("Reconfiguring {} to {}", property, newVal);
+        boolean peerStatsEnabled;
+        if(newVal == null){
+          peerStatsEnabled = DFS_DATANODE_PEER_STATS_ENABLED_DEFAULT;
+        }else{
+          peerStatsEnabled = Boolean.parseBoolean(newVal);
+        }
+        getConf().set(DFS_DATANODE_PEER_STATS_ENABLED_KEY,newVal);
+        this.getDnConf().peerStatsEnabled = peerStatsEnabled;
         return newVal;
       }
       default:
