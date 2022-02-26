@@ -298,7 +298,10 @@ public class DataNode extends ReconfigurableBase
                   DFS_DATANODE_SYNC_BEHIND_WRITES_IN_BACKGROUND_KEY,
                   DFS_DATANODE_DROP_CACHE_BEHIND_READS_KEY,
                   DFS_DATANODE_PMEM_CACHE_RECOVERY_KEY,
-                  DFS_DATANODE_PEER_STATS_ENABLED_KEY));
+                  DFS_DATANODE_PEER_STATS_ENABLED_KEY,
+                  DFS_DATA_TRANSFER_SERVER_TCPNODELAY,
+                  DFS_DATANODE_TRANSFERTO_ALLOWED_KEY,
+                  IGNORE_SECURE_PORTS_FOR_TESTING_KEY));
 
   public static final Log METRICS_LOG = LogFactory.getLog("DataNodeMetricsLog");
 
@@ -804,6 +807,42 @@ public class DataNode extends ReconfigurableBase
         }
         getConf().set(DFS_DATANODE_PEER_STATS_ENABLED_KEY,newVal);
         this.getDnConf().peerStatsEnabled = peerStatsEnabled;
+        return newVal;
+      }
+      case DFS_DATA_TRANSFER_SERVER_TCPNODELAY:{
+        LOG.info("Reconfiguring {} to {}", property, newVal);
+        boolean tcpNoDelay;
+        if(newVal == null){
+          tcpNoDelay = DFS_DATA_TRANSFER_SERVER_TCPNODELAY_DEFAULT;
+        }else{
+          tcpNoDelay = Boolean.parseBoolean(newVal);
+        }
+        getConf().set(DFS_DATA_TRANSFER_SERVER_TCPNODELAY,newVal);
+        this.getDnConf().tcpNoDelay = tcpNoDelay;
+        return newVal;
+      }
+      case DFS_DATANODE_TRANSFERTO_ALLOWED_KEY:{
+        LOG.info("Reconfiguring {} to {}", property, newVal);
+        boolean transferToAllowed;
+        if(newVal == null){
+          transferToAllowed = DFS_DATANODE_TRANSFERTO_ALLOWED_DEFAULT;
+        }else{
+          transferToAllowed = Boolean.parseBoolean(newVal);
+        }
+        getConf().set(DFS_DATANODE_TRANSFERTO_ALLOWED_KEY,newVal);
+        this.getDnConf().transferToAllowed = transferToAllowed;
+        return newVal;
+      }
+      case IGNORE_SECURE_PORTS_FOR_TESTING_KEY:{
+        LOG.info("Reconfiguring {} to {}", property, newVal);
+        boolean ignoreSecurePortsForTesting;
+        if(newVal == null){
+          ignoreSecurePortsForTesting = IGNORE_SECURE_PORTS_FOR_TESTING_DEFAULT;
+        }else{
+          ignoreSecurePortsForTesting = Boolean.parseBoolean(newVal);
+        }
+        getConf().set(IGNORE_SECURE_PORTS_FOR_TESTING_KEY,newVal);
+        this.getDnConf().ignoreSecurePortsForTesting = ignoreSecurePortsForTesting;
         return newVal;
       }
       default:

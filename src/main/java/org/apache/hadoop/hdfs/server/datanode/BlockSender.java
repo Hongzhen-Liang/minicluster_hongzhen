@@ -290,7 +290,7 @@ class BlockSender implements java.io.Closeable {
 
       // transferToFully() fails on 32 bit platforms for block sizes >= 2GB,
       // use normal transfer in those cases
-      this.transferToAllowed = datanode.getDnConf().transferToAllowed &&
+      this.transferToAllowed = datanode.getDnConf().getTransferToAllowed() &&
         (!is32Bit || length <= Integer.MAX_VALUE);
 
       // Obtain a reference before reading data

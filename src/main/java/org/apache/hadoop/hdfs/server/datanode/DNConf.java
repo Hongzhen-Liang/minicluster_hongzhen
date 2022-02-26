@@ -88,9 +88,9 @@ public class DNConf {
   final int socketKeepaliveTimeout;
   public int transferSocketSendBufferSize;
   public int transferSocketRecvBufferSize;
-  private final boolean tcpNoDelay;
+  public boolean tcpNoDelay;
 
-  final boolean transferToAllowed;
+  public boolean transferToAllowed;
   boolean dropCacheBehindWrites;
   boolean syncBehindWrites;
   boolean syncBehindWritesInBackground;
@@ -118,7 +118,7 @@ public class DNConf {
   String encryptionAlgorithm;
   final SaslPropertiesResolver saslPropsResolver;
   final TrustedChannelResolver trustedChannelResolver;
-  private final boolean ignoreSecurePortsForTesting;
+  public boolean ignoreSecurePortsForTesting;
   
   final long xceiverStopTimeout;
   final long restartReplicaExpiry;
@@ -408,7 +408,9 @@ public class DNConf {
    *
    * @return true if configured to skip checking secured port configuration
    */
+  int getIgnoreSecurePortsForTestingTimes=0;
   public boolean getIgnoreSecurePortsForTesting() {
+    printMylog(++getIgnoreSecurePortsForTestingTimes,"getIgnoreSecurePortsForTesting",ignoreSecurePortsForTesting+"");
     return ignoreSecurePortsForTesting;
   }
 
@@ -434,7 +436,9 @@ public class DNConf {
     return transferSocketSendBufferSize;
   }
 
+  int getDataTransferServerTcpNoDelayTimes=0;
   public boolean getDataTransferServerTcpNoDelay() {
+    printMylog(++getDataTransferServerTcpNoDelayTimes,"getDataTransferServerTcpNoDelay",tcpNoDelay+"");
     return tcpNoDelay;
   }
 
@@ -463,7 +467,7 @@ public class DNConf {
   int getVolFailuresToleratedTimes=0;
   public int getVolFailuresTolerated() {
 //    getVolFailuresToleratedTimes++;
-    printMylog(++getVolFailuresToleratedTimes,"getVolFailuresTolerated",volFailuresTolerated+"");
+    //printMylog(++getVolFailuresToleratedTimes,"getVolFailuresTolerated",volFailuresTolerated+"");
     return volFailuresTolerated;
   }
 
@@ -486,7 +490,7 @@ public class DNConf {
 
   int getPmemCacheRecoveryEnabledTimes=0;
   public boolean getPmemCacheRecoveryEnabled() {
-    printMylog(++getPmemCacheRecoveryEnabledTimes,"getPmemCacheRecoveryEnabled",pmemCacheRecoveryEnabled+"");
+    //printMylog(++getPmemCacheRecoveryEnabledTimes,"getPmemCacheRecoveryEnabled",pmemCacheRecoveryEnabled+"");
     return pmemCacheRecoveryEnabled;
   }
 
@@ -522,6 +526,12 @@ public class DNConf {
   public boolean getPeerStatsEnabled(){
     //printMylog(++peerStatsEnabledTime,"getPeerStatsEnabled",peerStatsEnabled+"");
     return peerStatsEnabled;
+  }
+
+  int getTransferToAllowedTimes=0;
+  public boolean getTransferToAllowed(){
+    printMylog(++getTransferToAllowedTimes,"getTransferToAllowed",transferToAllowed+"");
+    return transferToAllowed;
   }
 
   public void printMylog(int counter,String functionName, String value){
