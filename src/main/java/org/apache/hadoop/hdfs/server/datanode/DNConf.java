@@ -460,10 +460,10 @@ public class DNConf {
     return lifelineIntervalMs;
   }
 
-//  int getVolFailuresToleratedTimes=0;
+  int getVolFailuresToleratedTimes=0;
   public int getVolFailuresTolerated() {
 //    getVolFailuresToleratedTimes++;
-//    printMylog(getVolFailuresToleratedTimes,"getVolFailuresTolerated",volFailuresTolerated+"");
+    printMylog(++getVolFailuresToleratedTimes,"getVolFailuresTolerated",volFailuresTolerated+"");
     return volFailuresTolerated;
   }
 
@@ -498,29 +498,29 @@ public class DNConf {
 
   int getDropCacheBehindWritesTimes=0;
   public boolean getDropCacheBehindWrites(){
-    printMylog(++getDropCacheBehindWritesTimes,"getDropCacheBehindWrites",dropCacheBehindWrites+"");
+    //printMylog(++getDropCacheBehindWritesTimes,"getDropCacheBehindWrites",dropCacheBehindWrites+"");
     return dropCacheBehindWrites;
   }
 
   int getSyncBehindWritesTimes=0;
   public boolean getSyncBehindWrites(){
-    printMylog(++getSyncBehindWritesTimes,"getSyncBehindWrites",syncBehindWrites+"");
+    //printMylog(++getSyncBehindWritesTimes,"getSyncBehindWrites",syncBehindWrites+"");
     return syncBehindWrites;
   }
 
   int syncBehindWritesInBackgroundTimes=0;
   public boolean getSyncBehindWritesInBackground(){
-    printMylog(++syncBehindWritesInBackgroundTimes,"getSyncBehindWritesInBackground",syncBehindWritesInBackground+"");
+    //printMylog(++syncBehindWritesInBackgroundTimes,"getSyncBehindWritesInBackground",syncBehindWritesInBackground+"");
     return syncBehindWritesInBackground;
   }
   int dropCacheBehindReadsTimes=0;
   public boolean getDropCacheBehindReads(){
-    printMylog(++dropCacheBehindReadsTimes,"getDropCacheBehindReads",dropCacheBehindReads+"");
+    //printMylog(++dropCacheBehindReadsTimes,"getDropCacheBehindReads",dropCacheBehindReads+"");
     return dropCacheBehindReads;
   }
   int peerStatsEnabledTime=0;
   public boolean getPeerStatsEnabled(){
-    printMylog(++peerStatsEnabledTime,"getPeerStatsEnabled",peerStatsEnabled+"");
+    //printMylog(++peerStatsEnabledTime,"getPeerStatsEnabled",peerStatsEnabled+"");
     return peerStatsEnabled;
   }
 
@@ -529,7 +529,7 @@ public class DNConf {
     if(counter>1) {
       mylog.error(functionName+" called again,times "+ counter+" value: " + value);
     }else{
-      mylog.error("getBpReadyTimeout called:"  + value);
+      mylog.error(functionName+" called:"  + value);
     }
   }
 }
