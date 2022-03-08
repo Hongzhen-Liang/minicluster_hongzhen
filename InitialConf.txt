@@ -1,2 +1,3 @@
+#dfs.datanode.transferTo.allowed,false
 #dfs.encrypt.data.transfer,true
 #dfs.block.access.token.enable,true

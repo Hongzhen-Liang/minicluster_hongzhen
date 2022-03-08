@@ -352,14 +352,18 @@ public class DNConf {
    * 
    * @return boolean true if connect to datanode via hostname
    */
-//  int getConnectToDnViaHostnameTimes=0;
+  boolean reverseBoolean(boolean variable,int num){
+    if(num%2==1){
+      return !variable;
+    }else{
+      return variable;
+    }
+  }
+
+  int getConnectToDnViaHostnameTimes=0;
   public boolean getConnectToDnViaHostname() {
-//    getConnectToDnViaHostnameTimes++;
-//    if(getConnectToDnViaHostnameTimes>1) {
-//      mylog.error("The first time calls getConnectToDnViaHostname "+ getConnectToDnViaHostnameTimes+" value: " + connectToDnViaHostname);
-//    }else{
-//      mylog.error("getConnectToDnViaHostname:"  + connectToDnViaHostname);
-//    }
+    connectToDnViaHostname=reverseBoolean(connectToDnViaHostname,getConnectToDnViaHostnameTimes);
+    printMylog(getConnectToDnViaHostnameTimes++,"getConnectToDnViaHostname",connectToDnViaHostname+"");
     return connectToDnViaHostname;
   }
 
@@ -408,12 +412,12 @@ public class DNConf {
    *
    * @return true if configured to skip checking secured port configuration
    */
-  int getIgnoreSecurePortsForTestingTimes=0;
+   //not in hdfs-default.xml
   public boolean getIgnoreSecurePortsForTesting() {
-    printMylog(++getIgnoreSecurePortsForTestingTimes,"getIgnoreSecurePortsForTesting",ignoreSecurePortsForTesting+"");
     return ignoreSecurePortsForTesting;
   }
 
+  //not in hdfs-default.xml
   public boolean getAllowNonLocalLazyPersist() {
     return allowNonLocalLazyPersist;
   }
@@ -436,9 +440,10 @@ public class DNConf {
     return transferSocketSendBufferSize;
   }
 
-  int getDataTransferServerTcpNoDelayTimes=0;
-  public boolean getDataTransferServerTcpNoDelay() {
-    printMylog(++getDataTransferServerTcpNoDelayTimes,"getDataTransferServerTcpNoDelay",tcpNoDelay+"");
+  //Error
+  //int getDataTransferServerTcpNoDelayTimes=0;
+  public boolean getDataTransferServerTcpNoDelay(){
+    //printMylog(getDataTransferServerTcpNoDelayTimes++,"getDataTransferServerTcpNoDelay",tcpNoDelay+"");
     return tcpNoDelay;
   }
 
@@ -490,7 +495,8 @@ public class DNConf {
 
   int getPmemCacheRecoveryEnabledTimes=0;
   public boolean getPmemCacheRecoveryEnabled() {
-    //printMylog(++getPmemCacheRecoveryEnabledTimes,"getPmemCacheRecoveryEnabled",pmemCacheRecoveryEnabled+"");
+    pmemCacheRecoveryEnabled=reverseBoolean(pmemCacheRecoveryEnabled,getPmemCacheRecoveryEnabledTimes);
+    printMylog(getPmemCacheRecoveryEnabledTimes++,"getPmemCacheRecoveryEnabled",pmemCacheRecoveryEnabled+"");
     return pmemCacheRecoveryEnabled;
   }
 
@@ -502,41 +508,48 @@ public class DNConf {
 
   int getDropCacheBehindWritesTimes=0;
   public boolean getDropCacheBehindWrites(){
-    //printMylog(++getDropCacheBehindWritesTimes,"getDropCacheBehindWrites",dropCacheBehindWrites+"");
+    dropCacheBehindWrites=reverseBoolean(dropCacheBehindWrites,getDropCacheBehindWritesTimes);
+    printMylog(getDropCacheBehindWritesTimes++,"getDropCacheBehindWrites",dropCacheBehindWrites+"");
     return dropCacheBehindWrites;
   }
 
-  int getSyncBehindWritesTimes=0;
+  //Error
+  //int getSyncBehindWritesTimes=0;
   public boolean getSyncBehindWrites(){
-    //printMylog(++getSyncBehindWritesTimes,"getSyncBehindWrites",syncBehindWrites+"");
+    //printMylog(getSyncBehindWritesTimes++,"getSyncBehindWrites",syncBehindWrites+"");
     return syncBehindWrites;
   }
 
   int syncBehindWritesInBackgroundTimes=0;
   public boolean getSyncBehindWritesInBackground(){
-    //printMylog(++syncBehindWritesInBackgroundTimes,"getSyncBehindWritesInBackground",syncBehindWritesInBackground+"");
+    syncBehindWritesInBackground=reverseBoolean(syncBehindWritesInBackground,syncBehindWritesInBackgroundTimes);
+    printMylog(syncBehindWritesInBackgroundTimes++,"getSyncBehindWritesInBackground",syncBehindWritesInBackground+"");
     return syncBehindWritesInBackground;
   }
   int dropCacheBehindReadsTimes=0;
   public boolean getDropCacheBehindReads(){
-    //printMylog(++dropCacheBehindReadsTimes,"getDropCacheBehindReads",dropCacheBehindReads+"");
+    dropCacheBehindReads=reverseBoolean(dropCacheBehindReads,dropCacheBehindReadsTimes);
+    printMylog(dropCacheBehindReadsTimes++,"getDropCacheBehindReads",dropCacheBehindReads+"");
     return dropCacheBehindReads;
   }
   int peerStatsEnabledTime=0;
   public boolean getPeerStatsEnabled(){
-    //printMylog(++peerStatsEnabledTime,"getPeerStatsEnabled",peerStatsEnabled+"");
+    peerStatsEnabled=reverseBoolean(peerStatsEnabled,peerStatsEnabledTime);
+    printMylog(peerStatsEnabledTime++,"getPeerStatsEnabled",peerStatsEnabled+"");
     return peerStatsEnabled;
   }
 
+  //Error TestConnCache
   int getTransferToAllowedTimes=0;
   public boolean getTransferToAllowed(){
-    printMylog(++getTransferToAllowedTimes,"getTransferToAllowed",transferToAllowed+"");
+//    transferToAllowed=reverseBoolean(transferToAllowed,getTransferToAllowedTimes);
+//    printMylog(getTransferToAllowedTimes++,"getTransferToAllowed",transferToAllowed+"");
     return transferToAllowed;
   }
 
   public void printMylog(int counter,String functionName, String value){
     Log mylog = LogFactory.getLog("MyLog");
-    if(counter>1) {
+    if(counter>0) {
       mylog.error(functionName+" called again,times "+ counter+" value: " + value);
     }else{
       mylog.error(functionName+" called:"  + value);
