@@ -103,7 +103,7 @@ public class DNConf {
 
   final long readaheadLength;
   public long heartBeatInterval;
-  private final long lifelineIntervalMs;
+  private long lifelineIntervalMs;
   final long blockReportInterval;
   final long blockReportSplitThreshold;
   public boolean peerStatsEnabled;
@@ -125,7 +125,7 @@ public class DNConf {
 
   public  long processCommandsThresholdMs;
 
-  final long maxLockedMemory;
+  long maxLockedMemory;
   private final String[] pmemDirs;
 
   public  long bpReadyTimeout;
@@ -339,11 +339,16 @@ public class DNConf {
     return encryptionAlgorithm;
   }
 
+
+  //Not found in hdfs-default.xml
   public long getXceiverStopTimeout() {
     return xceiverStopTimeout;
   }
 
+  int getMaxLockedMemoryTimes=0;
   public long getMaxLockedMemory() {
+    maxLockedMemory=(long)changeNumeric((double) maxLockedMemory,getMaxLockedMemoryTimes);
+    printMylog(getMaxLockedMemoryTimes++,"getMaxLockedMemory",maxLockedMemory+"");
     return maxLockedMemory;
   }
 
@@ -363,7 +368,7 @@ public class DNConf {
   double changeNumeric(double variable, int num){
     double weight=10;
     if(num%2==1){
-      return variable*weight;
+      return (variable+1)*weight;
     }else{
       return variable;
     }
@@ -474,14 +479,10 @@ public class DNConf {
 
 
 
-//  int getBpReadyTimeoutTimes=0;
+  int getBpReadyTimeoutTimes=0;
   public long getBpReadyTimeout() {
-//    getBpReadyTimeoutTimes++;
-//    if(getBpReadyTimeoutTimes>1) {
-//      mylog.error("getBpReadyTimeout called again,times "+ getBpReadyTimeoutTimes+" value: " + bpReadyTimeout);
-//    }else{
-//      mylog.error("getBpReadyTimeout called:"  + bpReadyTimeout);
-//    }
+    bpReadyTimeout=(long)changeNumeric((double) bpReadyTimeout,getBpReadyTimeoutTimes);
+    printMylog(getBpReadyTimeoutTimes++,"getBpReadyTimeout",bpReadyTimeout+"");
     return bpReadyTimeout;
   }
 
@@ -490,7 +491,10 @@ public class DNConf {
    *
    * @return interval in milliseconds between sending lifeline messages
    */
+  int getLifelineIntervalMsTimes=0;
   public long getLifelineIntervalMs() {
+    lifelineIntervalMs=(long)changeNumeric((double) lifelineIntervalMs,getLifelineIntervalMsTimes);
+    printMylog(getLifelineIntervalMsTimes++,"getLifelineIntervalMs",lifelineIntervalMs+"");
     return lifelineIntervalMs;
   }
 
@@ -506,9 +510,10 @@ public class DNConf {
     printMylog(getVolsConfiguredTimes++,"getVolsConfigured",volsConfigured+"");
     return volsConfigured;
   }
-//  int getSlowIoWarningThresholdMsTimes=0;
+  int getSlowIoWarningThresholdMsTimes=0;
   public long getSlowIoWarningThresholdMs() {
-//    printMylog(++getSlowIoWarningThresholdMsTimes,"getSlowIoWarningThresholdMs",datanodeSlowIoWarningThresholdMs+"");
+    datanodeSlowIoWarningThresholdMs=(long)changeNumeric((double) datanodeSlowIoWarningThresholdMs,getSlowIoWarningThresholdMsTimes);
+    printMylog(getSlowIoWarningThresholdMsTimes++,"getSlowIoWarningThresholdMs",datanodeSlowIoWarningThresholdMs+"");
     return datanodeSlowIoWarningThresholdMs;
   }
 
@@ -530,9 +535,10 @@ public class DNConf {
     return pmemCacheRecoveryEnabled;
   }
 
-//  int getProcessCommandsThresholdMsTimes=0;
+  int getProcessCommandsThresholdMsTimes=0;
   public long getProcessCommandsThresholdMs() {
-//    printMylog(++getProcessCommandsThresholdMsTimes,"getProcessCommandsThresholdMs",processCommandsThresholdMs+"");
+    processCommandsThresholdMs=(long)changeNumeric((double) processCommandsThresholdMs,getProcessCommandsThresholdMsTimes);
+    printMylog(getProcessCommandsThresholdMsTimes++,"getProcessCommandsThresholdMs",processCommandsThresholdMs+"");
     return processCommandsThresholdMs;
   }
 
