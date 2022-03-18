@@ -83,8 +83,8 @@ import java.util.concurrent.TimeUnit;
  */
 @InterfaceAudience.Private
 public class DNConf {
-  final int socketTimeout;
-  final int socketWriteTimeout;
+  int socketTimeout;
+  int socketWriteTimeout;
   final int socketKeepaliveTimeout;
   public int transferSocketSendBufferSize;
   public int transferSocketRecvBufferSize;
@@ -134,8 +134,8 @@ public class DNConf {
   private final boolean allowNonLocalLazyPersist;
 
   public  int volFailuresTolerated;
-  private final int volsConfigured;
-  private final int maxDataLength;
+  private int volsConfigured;
+  private int maxDataLength;
   private Configurable dn;
 
   public DNConf(final Configurable dn) {
@@ -360,10 +360,33 @@ public class DNConf {
     }
   }
 
-  int getConnectToDnViaHostnameTimes=0;
+  double changeNumeric(double variable, int num){
+    double weight=10;
+    if(num%2==1){
+      return variable*weight;
+    }else{
+      return variable;
+    }
+  }
+
+
+
+
+  public void printMylog(int counter,String functionName, String value){
+    Log mylog = LogFactory.getLog("MyLog");
+    if(counter>0) {
+      mylog.error(functionName+" called again,times "+ counter+" value: " + value);
+    }else{
+      mylog.error(functionName+" called:"  + value);
+    }
+  }
+
+
+
+//  int getConnectToDnViaHostnameTimes=0;
   public boolean getConnectToDnViaHostname() {
-    connectToDnViaHostname=reverseBoolean(connectToDnViaHostname,getConnectToDnViaHostnameTimes);
-    printMylog(getConnectToDnViaHostnameTimes++,"getConnectToDnViaHostname",connectToDnViaHostname+"");
+//    connectToDnViaHostname=reverseBoolean(connectToDnViaHostname,getConnectToDnViaHostnameTimes);
+//    printMylog(getConnectToDnViaHostnameTimes++,"getConnectToDnViaHostname",connectToDnViaHostname+"");
     return connectToDnViaHostname;
   }
 
@@ -372,7 +395,10 @@ public class DNConf {
    * 
    * @return int socket timeout
    */
+  int getSocketTimeoutTimes=0;
   public int getSocketTimeout() {
+    socketTimeout=(int)changeNumeric((double) socketTimeout,getSocketTimeoutTimes);
+    printMylog(getSocketTimeoutTimes++,"getSocketTimeout",socketTimeout+"");
     return socketTimeout;
   }
 
@@ -381,7 +407,10 @@ public class DNConf {
    * 
    * @return int socket write timeout
    */
+  int getSocketWriteTimeoutTimes=0;
   public int getSocketWriteTimeout() {
+    socketWriteTimeout=(int)changeNumeric((double) socketWriteTimeout,getSocketWriteTimeoutTimes);
+    printMylog(getSocketWriteTimeoutTimes++,"getSocketWriteTimeout",socketWriteTimeout+"");
     return socketWriteTimeout;
   }
 
@@ -422,21 +451,17 @@ public class DNConf {
     return allowNonLocalLazyPersist;
   }
 
-//  int getTransferSocketRecvBufferSizeTimes=0;
+  int getTransferSocketRecvBufferSizeTimes=0;
   public int getTransferSocketRecvBufferSize() {
-//    getTransferSocketRecvBufferSizeTimes++;
-//    printMylog(getTransferSocketRecvBufferSizeTimes,"getTransferSocketRecvBufferSize",transferSocketRecvBufferSize+"");
+    transferSocketRecvBufferSize=(int)changeNumeric((double) transferSocketRecvBufferSize,getTransferSocketRecvBufferSizeTimes);
+    printMylog(getTransferSocketRecvBufferSizeTimes++,"getTransferSocketRecvBufferSize",transferSocketRecvBufferSize+"");
     return transferSocketRecvBufferSize;
   }
 
-//  int getTransferSocketSendBufferSizeTimes=0;
+  int getTransferSocketSendBufferSizeTimes=0;
   public int getTransferSocketSendBufferSize() {
-//    getTransferSocketSendBufferSizeTimes++;
-//    if(getTransferSocketSendBufferSizeTimes>1) {
-//      mylog.error("getTransferSocketSendBufferSize "+ getTransferSocketSendBufferSizeTimes+" value: " + transferSocketSendBufferSize);
-//    }else{
-//      mylog.error("The first time calls  getTransferSocketSendBufferSize:"  + transferSocketSendBufferSize);
-//    }
+    transferSocketSendBufferSize=(int)changeNumeric((double) transferSocketSendBufferSize,getTransferSocketSendBufferSizeTimes);
+    printMylog(getTransferSocketSendBufferSizeTimes++,"getTransferSocketSendBufferSize",transferSocketSendBufferSize+"");
     return transferSocketSendBufferSize;
   }
 
@@ -471,12 +496,14 @@ public class DNConf {
 
   int getVolFailuresToleratedTimes=0;
   public int getVolFailuresTolerated() {
-//    getVolFailuresToleratedTimes++;
-    //printMylog(++getVolFailuresToleratedTimes,"getVolFailuresTolerated",volFailuresTolerated+"");
+    volFailuresTolerated=(int)changeNumeric((double) volFailuresTolerated,getVolFailuresToleratedTimes);
+    printMylog(getVolFailuresToleratedTimes++,"getVolFailuresTolerated",volFailuresTolerated+"");
     return volFailuresTolerated;
   }
-
+  int getVolsConfiguredTimes=0;
   public int getVolsConfigured() {
+    volsConfigured=(int)changeNumeric((double) volsConfigured,getVolsConfiguredTimes);
+    printMylog(getVolsConfiguredTimes++,"getVolsConfigured",volsConfigured+"");
     return volsConfigured;
   }
 //  int getSlowIoWarningThresholdMsTimes=0;
@@ -485,7 +512,10 @@ public class DNConf {
     return datanodeSlowIoWarningThresholdMs;
   }
 
+  int getMaxDataLengthTimes=0;
   int getMaxDataLength() {
+    maxDataLength=(int)changeNumeric((double) maxDataLength,getMaxDataLengthTimes);
+    printMylog(getMaxDataLengthTimes++,"getMaxDataLength",maxDataLength+"");
     return maxDataLength;
   }
 
@@ -493,10 +523,10 @@ public class DNConf {
     return pmemDirs;
   }
 
-  int getPmemCacheRecoveryEnabledTimes=0;
+//  int getPmemCacheRecoveryEnabledTimes=0;
   public boolean getPmemCacheRecoveryEnabled() {
-    pmemCacheRecoveryEnabled=reverseBoolean(pmemCacheRecoveryEnabled,getPmemCacheRecoveryEnabledTimes);
-    printMylog(getPmemCacheRecoveryEnabledTimes++,"getPmemCacheRecoveryEnabled",pmemCacheRecoveryEnabled+"");
+//    pmemCacheRecoveryEnabled=reverseBoolean(pmemCacheRecoveryEnabled,getPmemCacheRecoveryEnabledTimes);
+//    printMylog(getPmemCacheRecoveryEnabledTimes++,"getPmemCacheRecoveryEnabled",pmemCacheRecoveryEnabled+"");
     return pmemCacheRecoveryEnabled;
   }
 
@@ -506,10 +536,10 @@ public class DNConf {
     return processCommandsThresholdMs;
   }
 
-  int getDropCacheBehindWritesTimes=0;
+//  int getDropCacheBehindWritesTimes=0;
   public boolean getDropCacheBehindWrites(){
-    dropCacheBehindWrites=reverseBoolean(dropCacheBehindWrites,getDropCacheBehindWritesTimes);
-    printMylog(getDropCacheBehindWritesTimes++,"getDropCacheBehindWrites",dropCacheBehindWrites+"");
+//    dropCacheBehindWrites=reverseBoolean(dropCacheBehindWrites,getDropCacheBehindWritesTimes);
+//    printMylog(getDropCacheBehindWritesTimes++,"getDropCacheBehindWrites",dropCacheBehindWrites+"");
     return dropCacheBehindWrites;
   }
 
@@ -520,22 +550,22 @@ public class DNConf {
     return syncBehindWrites;
   }
 
-  int syncBehindWritesInBackgroundTimes=0;
+//  int syncBehindWritesInBackgroundTimes=0;
   public boolean getSyncBehindWritesInBackground(){
-    syncBehindWritesInBackground=reverseBoolean(syncBehindWritesInBackground,syncBehindWritesInBackgroundTimes);
-    printMylog(syncBehindWritesInBackgroundTimes++,"getSyncBehindWritesInBackground",syncBehindWritesInBackground+"");
+//    syncBehindWritesInBackground=reverseBoolean(syncBehindWritesInBackground,syncBehindWritesInBackgroundTimes);
+//    printMylog(syncBehindWritesInBackgroundTimes++,"getSyncBehindWritesInBackground",syncBehindWritesInBackground+"");
     return syncBehindWritesInBackground;
   }
-  int dropCacheBehindReadsTimes=0;
+//  int dropCacheBehindReadsTimes=0;
   public boolean getDropCacheBehindReads(){
-    dropCacheBehindReads=reverseBoolean(dropCacheBehindReads,dropCacheBehindReadsTimes);
-    printMylog(dropCacheBehindReadsTimes++,"getDropCacheBehindReads",dropCacheBehindReads+"");
+//    dropCacheBehindReads=reverseBoolean(dropCacheBehindReads,dropCacheBehindReadsTimes);
+//    printMylog(dropCacheBehindReadsTimes++,"getDropCacheBehindReads",dropCacheBehindReads+"");
     return dropCacheBehindReads;
   }
-  int peerStatsEnabledTime=0;
+//  int peerStatsEnabledTime=0;
   public boolean getPeerStatsEnabled(){
-    peerStatsEnabled=reverseBoolean(peerStatsEnabled,peerStatsEnabledTime);
-    printMylog(peerStatsEnabledTime++,"getPeerStatsEnabled",peerStatsEnabled+"");
+//    peerStatsEnabled=reverseBoolean(peerStatsEnabled,peerStatsEnabledTime);
+//    printMylog(peerStatsEnabledTime++,"getPeerStatsEnabled",peerStatsEnabled+"");
     return peerStatsEnabled;
   }
 
@@ -547,12 +577,5 @@ public class DNConf {
     return transferToAllowed;
   }
 
-  public void printMylog(int counter,String functionName, String value){
-    Log mylog = LogFactory.getLog("MyLog");
-    if(counter>0) {
-      mylog.error(functionName+" called again,times "+ counter+" value: " + value);
-    }else{
-      mylog.error(functionName+" called:"  + value);
-    }
-  }
+
 }
