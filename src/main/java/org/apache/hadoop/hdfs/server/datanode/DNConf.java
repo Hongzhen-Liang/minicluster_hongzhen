@@ -400,10 +400,10 @@ public class DNConf {
    * 
    * @return int socket timeout
    */
-  int getSocketTimeoutTimes=0;
+//  int getSocketTimeoutTimes=0;
   public int getSocketTimeout() {
-    socketTimeout=(int)changeNumeric((double) socketTimeout,getSocketTimeoutTimes);
-    printMylog(getSocketTimeoutTimes++,"getSocketTimeout",socketTimeout+"");
+//    socketTimeout=(int)changeNumeric((double) socketTimeout,getSocketTimeoutTimes);
+//    printMylog(getSocketTimeoutTimes++,"getSocketTimeout",socketTimeout+"");
     return socketTimeout;
   }
 
@@ -412,10 +412,10 @@ public class DNConf {
    * 
    * @return int socket write timeout
    */
-  int getSocketWriteTimeoutTimes=0;
+//  int getSocketWriteTimeoutTimes=0;
   public int getSocketWriteTimeout() {
-    socketWriteTimeout=(int)changeNumeric((double) socketWriteTimeout,getSocketWriteTimeoutTimes);
-    printMylog(getSocketWriteTimeoutTimes++,"getSocketWriteTimeout",socketWriteTimeout+"");
+//    socketWriteTimeout=(int)changeNumeric((double) socketWriteTimeout,getSocketWriteTimeoutTimes);
+//    printMylog(getSocketWriteTimeoutTimes++,"getSocketWriteTimeout",socketWriteTimeout+"");
     return socketWriteTimeout;
   }
 
@@ -458,15 +458,15 @@ public class DNConf {
 
   int getTransferSocketRecvBufferSizeTimes=0;
   public int getTransferSocketRecvBufferSize() {
-    transferSocketRecvBufferSize=(int)changeNumeric((double) transferSocketRecvBufferSize,getTransferSocketRecvBufferSizeTimes);
-    printMylog(getTransferSocketRecvBufferSizeTimes++,"getTransferSocketRecvBufferSize",transferSocketRecvBufferSize+"");
+//    transferSocketRecvBufferSize=(int)changeNumeric((double) transferSocketRecvBufferSize,getTransferSocketRecvBufferSizeTimes);
+//    printMylog(getTransferSocketRecvBufferSizeTimes++,"getTransferSocketRecvBufferSize",transferSocketRecvBufferSize+"");
     return transferSocketRecvBufferSize;
   }
 
   int getTransferSocketSendBufferSizeTimes=0;
   public int getTransferSocketSendBufferSize() {
-    transferSocketSendBufferSize=(int)changeNumeric((double) transferSocketSendBufferSize,getTransferSocketSendBufferSizeTimes);
-    printMylog(getTransferSocketSendBufferSizeTimes++,"getTransferSocketSendBufferSize",transferSocketSendBufferSize+"");
+//    transferSocketSendBufferSize=(int)changeNumeric((double) transferSocketSendBufferSize,getTransferSocketSendBufferSizeTimes);
+//    printMylog(getTransferSocketSendBufferSizeTimes++,"getTransferSocketSendBufferSize",transferSocketSendBufferSize+"");
     return transferSocketSendBufferSize;
   }
 
@@ -481,8 +481,8 @@ public class DNConf {
 
   int getBpReadyTimeoutTimes=0;
   public long getBpReadyTimeout() {
-    bpReadyTimeout=(long)changeNumeric((double) bpReadyTimeout,getBpReadyTimeoutTimes);
-    printMylog(getBpReadyTimeoutTimes++,"getBpReadyTimeout",bpReadyTimeout+"");
+//    bpReadyTimeout=(long)changeNumeric((double) bpReadyTimeout,getBpReadyTimeoutTimes);
+//    printMylog(getBpReadyTimeoutTimes++,"getBpReadyTimeout",bpReadyTimeout+"");
     return bpReadyTimeout;
   }
 
@@ -493,34 +493,34 @@ public class DNConf {
    */
   int getLifelineIntervalMsTimes=0;
   public long getLifelineIntervalMs() {
-    lifelineIntervalMs=(long)changeNumeric((double) lifelineIntervalMs,getLifelineIntervalMsTimes);
-    printMylog(getLifelineIntervalMsTimes++,"getLifelineIntervalMs",lifelineIntervalMs+"");
+//    lifelineIntervalMs=(long)changeNumeric((double) lifelineIntervalMs,getLifelineIntervalMsTimes);
+//    printMylog(getLifelineIntervalMsTimes++,"getLifelineIntervalMs",lifelineIntervalMs+"");
     return lifelineIntervalMs;
   }
 
   int getVolFailuresToleratedTimes=0;
   public int getVolFailuresTolerated() {
-    volFailuresTolerated=(int)changeNumeric((double) volFailuresTolerated,getVolFailuresToleratedTimes);
-    printMylog(getVolFailuresToleratedTimes++,"getVolFailuresTolerated",volFailuresTolerated+"");
+//    volFailuresTolerated=(int)changeNumeric((double) volFailuresTolerated,getVolFailuresToleratedTimes);
+//    printMylog(getVolFailuresToleratedTimes++,"getVolFailuresTolerated",volFailuresTolerated+"");
     return volFailuresTolerated;
   }
   int getVolsConfiguredTimes=0;
   public int getVolsConfigured() {
-    volsConfigured=(int)changeNumeric((double) volsConfigured,getVolsConfiguredTimes);
-    printMylog(getVolsConfiguredTimes++,"getVolsConfigured",volsConfigured+"");
+//    volsConfigured=(int)changeNumeric((double) volsConfigured,getVolsConfiguredTimes);
+//    printMylog(getVolsConfiguredTimes++,"getVolsConfigured",volsConfigured+"");
     return volsConfigured;
   }
   int getSlowIoWarningThresholdMsTimes=0;
   public long getSlowIoWarningThresholdMs() {
-    datanodeSlowIoWarningThresholdMs=(long)changeNumeric((double) datanodeSlowIoWarningThresholdMs,getSlowIoWarningThresholdMsTimes);
-    printMylog(getSlowIoWarningThresholdMsTimes++,"getSlowIoWarningThresholdMs",datanodeSlowIoWarningThresholdMs+"");
+//    datanodeSlowIoWarningThresholdMs=(long)changeNumeric((double) datanodeSlowIoWarningThresholdMs,getSlowIoWarningThresholdMsTimes);
+//    printMylog(getSlowIoWarningThresholdMsTimes++,"getSlowIoWarningThresholdMs",datanodeSlowIoWarningThresholdMs+"");
     return datanodeSlowIoWarningThresholdMs;
   }
 
   int getMaxDataLengthTimes=0;
   int getMaxDataLength() {
-    maxDataLength=(int)changeNumeric((double) maxDataLength,getMaxDataLengthTimes);
-    printMylog(getMaxDataLengthTimes++,"getMaxDataLength",maxDataLength+"");
+//    maxDataLength=(int)changeNumeric((double) maxDataLength,getMaxDataLengthTimes);
+//    printMylog(getMaxDataLengthTimes++,"getMaxDataLength",maxDataLength+"");
     return maxDataLength;
   }
 
@@ -537,8 +537,8 @@ public class DNConf {
 
   int getProcessCommandsThresholdMsTimes=0;
   public long getProcessCommandsThresholdMs() {
-    processCommandsThresholdMs=(long)changeNumeric((double) processCommandsThresholdMs,getProcessCommandsThresholdMsTimes);
-    printMylog(getProcessCommandsThresholdMsTimes++,"getProcessCommandsThresholdMs",processCommandsThresholdMs+"");
+//    processCommandsThresholdMs=(long)changeNumeric((double) processCommandsThresholdMs,getProcessCommandsThresholdMsTimes);
+//    printMylog(getProcessCommandsThresholdMsTimes++,"getProcessCommandsThresholdMs",processCommandsThresholdMs+"");
     return processCommandsThresholdMs;
   }
 

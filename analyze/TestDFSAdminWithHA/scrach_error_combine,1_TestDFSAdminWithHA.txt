@@ -1,0 +1,3 @@
+org.apache.hadoop.hdfs.server.datanode.TestDataNodeTransferSocketSize
+org.apache.hadoop.hdfs.server.datanode.TestDataNodeVolumeFailure
+org.apache.hadoop.hdfs.server.datanode.TestDataNodeVolumeFailureToleration

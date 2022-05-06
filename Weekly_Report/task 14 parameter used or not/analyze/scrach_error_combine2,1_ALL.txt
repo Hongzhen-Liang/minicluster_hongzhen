@@ -1,0 +1,7 @@
+org.apache.hadoop.hdfs.tools.TestDFSAdmin
+org.apache.hadoop.hdfs.TestConnCache
+org.apache.hadoop.hdfs.web.TestWebHdfsTimeouts
+org.apache.hadoop.fs.TestHdfsNativeCodeLoader
+org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.TestFsVolumeList
+org.apache.hadoop.hdfs.server.datanode.TestDataNodeTcpNoDelay
+org.apache.hadoop.hdfs.TestDFSUtil
